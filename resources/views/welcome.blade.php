@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>HUMDRAMA</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
@@ -27,6 +27,7 @@
 
             body {
                 font-family: 'Prompt', sans-serif;
+                background-color: #373230;
             }
 
             #test {
@@ -37,7 +38,7 @@
             }
 
             .btn-booking {
-                background-color: #00CA4C;
+                background-color: #2b4657;
                 border-radius: 5px;
 
             }
@@ -49,6 +50,25 @@
             .nav-item {
                 margin-left: 20px;
             }
+
+            .setMap {
+                color: #f2c05e;
+                font-size: 40px;
+                /*padding: 30px 0px;*/
+                border-bottom: 1px solid #851a21;
+                margin-bottom: 40px;
+            }
+
+            .contentMain {
+                padding: 40px 50px;
+                background-color: #2b2624;
+            }
+
+            #block {
+                padding: 25px 25px;
+            }
+
+
         </style>
     </head>
     <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -56,31 +76,40 @@
     <div>
 
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" style="min-height: 80px" id="nav">
+        <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #f2c05e" id="nav">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">Humdramaku</a>
+                <a class="navbar-brand" href="{{ url('/') }}"><img src="{{asset('images/logo.png')}}"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
-                    <div class="navbar-nav text-center">
+                    <div class="navbar-nav text-center" style="font-size: 20px">
                         <a class="nav-item nav-link active" href="{{ url('/about') }}">เกี่ยวกับ<span class="sr-only">(current)</span></a>
                         <a class="nav-item nav-link" href="#" id="story">เนื้อเรื่องย่อ</a>
                         <a class="nav-item nav-link" href="#">การจำหน่ายบัตร</a>
                         <a class="nav-item nav-link disabled" href="#">แผนที่</a>
                         <a class="nav-item nav-link disabled" href="#">ชำระเงิน</a>
+                        <a class="nav-item nav-link " href="{{route('checkStatus')}}">ตรวจสอบสถานะ</a>
                         <a class="nav-item nav-link btn-booking text-center" id="booking" href="{{url('/showtimes')}}">สำรองที่นั่ง</a>
                     </div>
                 </div>
             </div>
 
         </nav>
-        <div>
-            <img id="test" src="https://images.unsplash.com/photo-1549921613-8db30562bad1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="">
+
+        <div class="container-fluid">
+            <div class="card contentMain mt-5">
+                <div class="setMap" >
+                    แผนที่การเดินทาง
+                    <div style="font-size: 18px; color: white">ละคอนมะนุดครั้งที่ 26 เรื่อง “THE TIMEMISSION เดอะไทม์มิชชัน”</div>
+                </div>
+                <div id="block" style="border-radius: 10px ">
+                    <iframe  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3034.118054595773!2d100.56274765340407!3d13.847291889159486!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa0841134b6deda0!2sAgricultural+Museum!5e0!3m2!1sen!2sth!4v1550563580138" width=100% height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
-        <div>
-            <img id="test1" src="https://images.unsplash.com/photo-1549915726-a0361a1f3236?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1342&q=80" alt="">
-        </div>
+
+
     </div>
 
 

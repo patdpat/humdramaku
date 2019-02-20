@@ -8,29 +8,31 @@
 
     <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
 
+    <title>HUMDRAMA</title>
 
 
     <style>
         #humdrama{
             font-size: 22px;
-            color: darkmagenta;
+            color: #f3c15f;
             transition: 1.0s;
 
         }
 
         #humdrama:hover{
             font-size: 30px;
-            color: darkmagenta;
+            color: #f3c15f;
             transition: 0.5s;
 
         }
 
         #head {
-            color: #1b4b72;
+            color: #f2c05e;
         }
 
         .card {
             transition: 0.5s;
+            background-color: #2b2624;
         }
 
         .card:hover {
@@ -40,18 +42,19 @@
         #nameadvisor {
             font-size: 20px;
             transition: 1.0s;
+            color: white;
         }
 
         #nameadvisor:hover {
             font-size: 25px;
-            color: #4c110f;
+            color: white;
         }
 
         body {
-            background-image: url("https://images.unsplash.com/photo-1532469342119-c1ac6eb66912?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80");
+            /*background-image: url("https://images.unsplash.com/photo-1532469342119-c1ac6eb66912?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80");*/
             background-size: cover;
             font-family: 'Prompt', sans-serif;
-
+            background-color: #373230;
         }
 
         #img:hover{
@@ -63,7 +66,7 @@
         }
 
         .btn-booking {
-            background-color: #00CA4C;
+            background-color: #2b4657;
             border-radius: 5px;
 
          }
@@ -84,19 +87,20 @@
 
     <div>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" style="min-height: 80px" id="nav">
+        <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #f2c05e" id="nav">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">Humdramaku</a>
+                <a class="navbar-brand" href="{{ url('/') }}"><img src="{{asset('images/logo.png')}}"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
-                    <div class="navbar-nav text-center">
+                    <div class="navbar-nav text-center" style="font-size: 20px">
                         <a class="nav-item nav-link active" href="{{ url('/about') }}">เกี่ยวกับ<span class="sr-only">(current)</span></a>
                         <a class="nav-item nav-link" href="#" id="story">เนื้อเรื่องย่อ</a>
                         <a class="nav-item nav-link" href="#">การจำหน่ายบัตร</a>
                         <a class="nav-item nav-link disabled" href="#">แผนที่</a>
                         <a class="nav-item nav-link disabled" href="#">ชำระเงิน</a>
+                        <a class="nav-item nav-link" href="{{route('checkStatus')}}">ตรวจสอบสถานะ</a>
                         <a class="nav-item nav-link btn-booking text-center" id="booking" href="{{url('/showtimes')}}">สำรองที่นั่ง</a>
                     </div>
                 </div>
@@ -105,13 +109,13 @@
         </nav>
 
         <div class="container mt-5 col-md-8 col-sm-12">
-            <h2 class="text-center"><span id="head">HUMDRAMA</span> คืออะไร ?</h2>
+            <h2 class="text-center" style="color: white"><span id="head">ละคอนมะนุด</span> คืออะไร ?</h2>
             <div class="card mt-3 pt-5 pl-5 pb-5 pr-5" style="border-radius: 20px" id="card">
                 <div class="row">
                     <div class="col-sm">
                         <img src="{{ asset('images/Untitled-2.jpg')  }}" style="width: 100% ; transition: 1.0s" id="img" >
                     </div>
-                    <div class="col-sm">
+                    <div class="col-sm mt-5" style="color: white">
                         <p style="font-size: 22px">&nbsp;&nbsp;&nbsp;&nbsp;ละคอนมะนุด คือละครเวทีที่จัดทำขึ้นโดยนิสิตสาขาสื่อสารมวลชน ภาควิชานิเทศศาสตร์และสารสนเทศศาสตร์ คณะมนุษยศาสตร์ มหาวิทยาลัยเกษตรศาสตร์(บางเขน) ซึ่งเป็นละครเวทีแห่งแรกของมหาวิทยาลัย ที่มีชื่อว่าละคอนมะนุด เนื่องจาก จะให้สอดคล้องกับชื่อคณะ และมีแนวคิดหลักว่าเป็นละครเวทีที่เข้าใจความเป็นมนุษย์ของเราทุกคน ซึ่งมีชื่อย่อว่า
                             <span id="humdrama">HUMDRAMA</span> มาจาก Humanities Drama โดยได้จัดทำขึ้นติดต่อกันมาถึงครั้งนี้ คือครั้งที่ 26</p>
                     </div>
@@ -120,7 +124,7 @@
             </div>
 
             <div class="col-sm mt-5" >
-                <h2 class="pb-3 text-center" style="color: #1b4b72">อาจารย์ที่ปรึกษาโครงการละครเวทีคณะมนุษยศาสตร์</h2>
+                <h2 class="pb-3 text-center" style="color: #f3c15f">อาจารย์ที่ปรึกษาโครงการละครเวทีคณะมนุษยศาสตร์</h2>
                 <div class="card mt-3 pt-3 pl-3 pb-3 pr-3" style="border-radius: 20px">
                     <div>
                         <img src="{{asset('images/messageImage_1550075652898.jpg')}}" style="width: 100%; transition: 1.0s" id="advisor">
@@ -133,8 +137,8 @@
             </div>
 
             <div class="col-sm mt-5" style="margin-bottom: 200px">
-                <h2 class="pb-3 text-center" style="color: #1b4b72">ประวัติรายชื่อละครเวทีคณะมนุษยศาสตร์</h2>
-                <div class="row">
+                <h2 class="pb-3 text-center" style="color: #f3c15f">ประวัติรายชื่อละครเวทีคณะมนุษยศาสตร์</h2>
+                <div class="row" style="color: white">
                     <div class="col-12 col-md-4 col-sm-6 d-flex align-items-stretch">
                         <div class="card mt-3 pt-3 pl-3 pb-3 pr-3 text-center" style="border-radius: 20px ; width: 100%">
                             <p>ครั้งที่ 1	พ.ศ.2533 ศัตรูของประชาชน</p>
@@ -256,7 +260,7 @@
                 </div>
             </div>
 
-            <p class="text-center"><span style="font-size: 20px">© </span>2017 HUMDRAMA All Rights Reserved</p>
+            <p class="text-center" style="color: white"><span style="font-size: 20px">© </span>2017 HUMDRAMA All Rights Reserved</p>
         </div>
     </div>
 

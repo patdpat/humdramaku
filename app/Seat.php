@@ -15,7 +15,7 @@ class Seat extends Model
     }
 
     //
-    protected $fillable = ['show_id','seatnumber' , 'name' , 'email' , 'phone', 'status'];
+    protected $fillable = ['show_id','seatnumber' , 'name' , 'email' , 'phone', 'status','orderid'];
 
     protected $dates = ['deleted_at'];
 }

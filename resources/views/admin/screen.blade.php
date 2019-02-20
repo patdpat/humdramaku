@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
 
 
+    <title>HUMDRAMA</title>
 
 
 
@@ -18,7 +19,7 @@
         body {
             /*background-image: url("https://images.unsplash.com/photo-1532469342119-c1ac6eb66912?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80");*/
             /*background-size: cover;*/
-            background-color: #1d2124;
+            background-color: #373230;
             font-family: 'Prompt', sans-serif;
             color: white;
 
@@ -26,7 +27,7 @@
 
 
         .btn-booking {
-            background-color: #00CA4C;
+            background-color: #2b4657;
             border-radius: 5px;
 
         }
@@ -89,23 +90,25 @@
 
 <div>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" style="min-height: 80px" id="nav">
+    <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #f2c05e" id="nav">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">Humdramaku</a>
+            <a class="navbar-brand" href="{{ url('/') }}"><img src="{{asset('images/logo.png')}}"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
-                <div class="navbar-nav text-center">
+                <div class="navbar-nav text-center" style="font-size: 20px">
                     <a class="nav-item nav-link active" href="{{ url('/about') }}">เกี่ยวกับ<span class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link" href="#" id="story">เนื้อเรื่องย่อ</a>
                     <a class="nav-item nav-link" href="#">การจำหน่ายบัตร</a>
                     <a class="nav-item nav-link disabled" href="#">แผนที่</a>
                     <a class="nav-item nav-link disabled" href="#">ชำระเงิน</a>
+                    <a class="nav-item nav-link " href="{{route('checkStatus')}}">ตรวจสอบสถานะ</a>
                     <a class="nav-item nav-link btn-booking text-center" id="booking" href="{{url('/showtimes')}}">สำรองที่นั่ง</a>
                 </div>
             </div>
         </div>
+
     </nav>
 
     <div class="container mt-3 col-md-11" style="width: 1520px">
@@ -595,10 +598,11 @@
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                {!! Form::open(['route' => 'seat', 'method' => 'post']) !!}
+                                {!! Form::open(['route' => ['seat'] , 'method' => 'post']) !!}
                                 <input type="hidden" name="show" value="{{request()->query('show')}}">
                                 <div class="modal-body">
                                     <input type="hidden" name="getseat" id="blockinput" >
+                                    <input type="hidden" name="orderID" value="{{\Illuminate\Support\Str::random(10)}}">
                                     <div class="allseat" ></div>
                                     <div>
                                         Name &nbsp;<input name="name" class="mt-4" type="text" placeholder="Name" style="border-radius: 5px ; text-align: center">

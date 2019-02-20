@@ -23,6 +23,7 @@ class CreateSeatsTable extends Migration
             $table->string('name')->nullable();
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
+            $table->string('orderid')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

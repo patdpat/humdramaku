@@ -48,3 +48,12 @@ Route::get('/adminAddSeat', [
 Route::post('/seat', [
     'as' => 'seat',
     'uses' => 'GuestController@seatCreatStore']);
+
+Route::get('/checkStatus', [
+    'as' => 'checkStatus',
+    'uses' => 'CheckStatus@checkStatus']);
+
+
+Route::post('/api/order', [
+    'as' => 'api.order',
+    'uses' => 'ApiController@order']);

@@ -49,12 +49,14 @@ class GuestController extends Controller
 //        $email = $request->email;
 //        $phone = $request->phone;
 //        $id = $request->show;
+//        $orderId = $request->orderID;
+//        return $orderId;
 //
         $allseat = explode(',',$request->getseat);
         foreach ($allseat as $seat) {
-//            echo $seat;
+//            echo $request->orderID;
             if ($seat!=null) {
-                echo $seat."<p>";
+//                echo $seat."<p>";
                 $check = Seat::where('seatnumber',$seat)->where('show_id',$request->show)->where('status',1)->first();
                 if (!$check){
                     $information = new Seat(
@@ -64,7 +66,8 @@ class GuestController extends Controller
                             'name' => $request->name,
                             'email' => $request->email,
                             'phone' => $request->phone,
-                            'status' => 1
+                            'status' => 1,
+                            'orderid' => $request->orderID
                         ]
                     );
                     $information->save();
@@ -77,7 +80,7 @@ class GuestController extends Controller
 //
 //        dd('pass');
 //
-        return "pass";
+        return view('admin.checkstatus');
     }
 }
 
