@@ -3,6 +3,9 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
 
+
+
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,6 +24,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+        <link rel="shortcut icon" type="image/png" href="{{asset('images/logo.png')}}">
 
         <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
         <style>
@@ -97,11 +102,11 @@
 
         </nav>
 
-        <div class="container-fluid">
+        <div class="container">
             <div class="card contentMain mt-5">
                 <div class="setMap" >
                     แผนที่การเดินทาง
-                    <div style="font-size: 18px; color: white">ละคอนมะนุดครั้งที่ 26 เรื่อง “THE TIMEMISSION เดอะไทม์มิชชัน”</div>
+                    <div style="font-size: 18px; color: white">ละคอนมะนุดครั้งที่ 27 เรื่อง “THE TIMEMISSION เดอะไทม์มิชชัน”</div>
                 </div>
                 <div id="block" style="border-radius: 10px ">
                     <iframe  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3034.118054595773!2d100.56274765340407!3d13.847291889159486!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa0841134b6deda0!2sAgricultural+Museum!5e0!3m2!1sen!2sth!4v1550563580138" width=100% height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -122,6 +127,7 @@
             {{--}, 1000);--}}
         {{--})--}}
     {{--</script>--}}
-
+    @include('sweetalert::alert')`
     </body>
+
 </html>

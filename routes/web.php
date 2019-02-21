@@ -57,3 +57,7 @@ Route::get('/checkStatus', [
 Route::post('/api/order', [
     'as' => 'api.order',
     'uses' => 'ApiController@order']);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
