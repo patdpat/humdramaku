@@ -13,6 +13,12 @@ class GuestController extends Controller
         return view('welcome');
     }
 
+
+    public function payment()
+    {
+        return view('admin.payment');
+    }
+
     public function booking(Request $request)
     {
         $validated = $request->validate([
@@ -82,5 +88,8 @@ class GuestController extends Controller
 //
         return view('admin.checkstatus');
     }
+
+
+
 }
 

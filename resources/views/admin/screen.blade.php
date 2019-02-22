@@ -104,8 +104,8 @@
                     <a class="nav-item nav-link" href="#" id="story">เนื้อเรื่องย่อ</a>
                     <a class="nav-item nav-link" href="#">การจำหน่ายบัตร</a>
                     <a class="nav-item nav-link disabled" href="#">แผนที่</a>
-                    <a class="nav-item nav-link disabled" href="#">ชำระเงิน</a>
-                    <a class="nav-item nav-link " href="{{route('checkStatus')}}">ตรวจสอบสถานะ</a>
+                    <a class="nav-item nav-link" href="{{route('payment')}}">ชำระเงิน</a>
+                    <a class="nav-item nav-link" href="{{route('checkStatus')}}">ตรวจสอบสถานะ</a>
                     <a class="nav-item nav-link btn-booking text-center" id="booking" href="{{url('/showtimes')}}">สำรองที่นั่ง</a>
                 </div>
             </div>
@@ -604,7 +604,7 @@
                                 <input type="hidden" name="show" value="{{request()->query('show')}}">
                                 <div class="modal-body">
                                     <input type="hidden" name="getseat" id="blockinput" >
-                                    <input type="hidden" name="orderID" value="{{\Illuminate\Support\Str::random(10)}}">
+                                    <input type="hidden" name="orderID" value="{{\Illuminate\Support\Str::random(16)}}">
                                     <div class="allseat" ></div>
                                     <div>
                                         Name &nbsp;<input name="name" class="mt-4" type="text" placeholder="Name" style="border-radius: 5px ; text-align: center">
@@ -648,8 +648,9 @@
         var arr = [];
         $('.imgSelect').on('click tap',function (e) {
             console.log($(this).attr('id'))
+            console.log($(this).attr('src'))
             // if (count < 6) {
-                if ($(this).attr('src') == 'http://localhost:8888/images/seat.png') {
+                if ($(this).attr('src') == 'http://127.0.0.1:8000/images/seat.png') {
                     $(this).attr('src','{{asset("images/reserve.png")}}');
                     arr.push($(this).attr('id'))
                     console.log(arr.length)

@@ -37,13 +37,6 @@ Route::post('/api/timer', [
     'as' => 'api.timer',
     'uses' => 'ApiController@api']);
 
-Route::get('/adminAdd', [
-    'as' => 'adminAdd',
-    'uses' => 'AddseatController@viewSeat']);
-
-Route::get('/adminAddSeat', [
-    'as' => 'adminAddSeat',
-    'uses' => 'AddseatController@addSeat']);
 
 Route::post('/seat', [
     'as' => 'seat',
@@ -61,3 +54,9 @@ Route::post('/api/order', [
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+Route::get('/payment', [
+    'as' => 'payment',
+    'uses' => 'GuestController@payment']);

@@ -1,4 +1,5 @@
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
@@ -100,7 +101,7 @@
                         <a class="nav-item nav-link" href="#" id="story">เนื้อเรื่องย่อ</a>
                         <a class="nav-item nav-link" href="#">การจำหน่ายบัตร</a>
                         <a class="nav-item nav-link disabled" href="#">แผนที่</a>
-                        <a class="nav-item nav-link disabled" href="#">ชำระเงิน</a>
+                        <a class="nav-item nav-link" href="{{route('payment')}}">ชำระเงิน</a>
                         <a class="nav-item nav-link" href="{{route('checkStatus')}}">ตรวจสอบสถานะ</a>
                         <a class="nav-item nav-link btn-booking text-center" id="booking" href="{{url('/showtimes')}}">สำรองที่นั่ง</a>
                     </div>
