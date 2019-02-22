@@ -92,7 +92,7 @@
 
 <div>
 
-    <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #f2c05e" id="nav">
+    <nav class="navbar navbar-expand-lg navbar-light " style="min-height: 80px ;background-color: #f2c05e" id="nav">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}"><img src="{{asset('images/logo.png')}}"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -101,9 +101,9 @@
             <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
                 <div class="navbar-nav text-center" style="font-size: 20px">
                     <a class="nav-item nav-link active" href="{{ url('/about') }}">เกี่ยวกับ<span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="#" id="story">เนื้อเรื่องย่อ</a>
-                    <a class="nav-item nav-link" href="#">การจำหน่ายบัตร</a>
-                    <a class="nav-item nav-link disabled" href="#">แผนที่</a>
+                    <a class="nav-item nav-link" href="{{route('index')}}" id="story">เนื้อเรื่องย่อ</a>
+                    <a class="nav-item nav-link" href="{{route('ticket')}}">การจำหน่ายบัตร</a>
+                    <a class="nav-item nav-link" href="{{route('map')}}">แผนที่</a>
                     <a class="nav-item nav-link" href="{{route('payment')}}">ชำระเงิน</a>
                     <a class="nav-item nav-link" href="{{route('checkStatus')}}">ตรวจสอบสถานะ</a>
                     <a class="nav-item nav-link btn-booking text-center" id="booking" href="{{url('/showtimes')}}">สำรองที่นั่ง</a>
@@ -606,19 +606,20 @@
                                     <input type="hidden" name="getseat" id="blockinput" >
                                     <input type="hidden" name="orderID" value="{{\Illuminate\Support\Str::random(16)}}">
                                     <div class="allseat" ></div>
+                                    ราคารวม : <span name="price" id="price"></span> บาท
                                     <div>
-                                        Name &nbsp;<input name="name" class="mt-4" type="text" placeholder="Name" style="border-radius: 5px ; text-align: center">
+                                        Name &nbsp;<input name="name" class="mt-4" type="text"style="border-radius: 5px ; text-align: center">
                                     </div>
                                     <div>
-                                        Email &nbsp;<input name="email" class="mt-4" type="text" placeholder="xxxx@..." style="border-radius: 5px ; text-align: center">
+                                        Email &nbsp;<input name="email" class="mt-4" type="text" style="border-radius: 5px ; text-align: center">
                                     </div>
                                     <div>
-                                        Phone <input name="phone" class="mt-4" type="text" placeholder="xxxx@..." style="border-radius: 5px ; text-align: center">
+                                        Phone <input name="phone" class="mt-4" type="text" style="border-radius: 5px ; text-align: center">
                                     </div>
                                 </div>
                                 <div class="modal-footer justify-content-center">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">ยกเลิก</button>
+                                    <button type="submit" class="btn btn-primary">ยืนยัน</button>
                                 </div>
                                 {!! Form::close() !!}
 
@@ -650,7 +651,7 @@
             console.log($(this).attr('id'))
             console.log($(this).attr('src'))
             // if (count < 6) {
-                if ($(this).attr('src') == 'http://127.0.0.1:8000/images/seat.png') {
+                if ($(this).attr('src') == '{{asset('images/seat.png')}}') {
                     $(this).attr('src','{{asset("images/reserve.png")}}');
                     arr.push($(this).attr('id'))
                     console.log(arr.length)
@@ -697,6 +698,7 @@
             if (arr.length == 1) {
                 $('.allseat').append(arr[0]);
                 $('#blockinput').val(arr[0]);
+                $('#price').text($('#totalprice').text());
             }
             else {
                 $('.allseat').text("");
@@ -706,6 +708,7 @@
 
                 })
                 $('#blockinput').val($('.allseat').text());
+                $('#price').text($('#totalprice').text());
             }
 
 

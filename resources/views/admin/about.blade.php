@@ -22,7 +22,7 @@
         }
 
         #humdrama:hover{
-            font-size: 30px;
+            font-size: 25px;
             color: #f3c15f;
             transition: 0.5s;
 
@@ -48,7 +48,7 @@
         }
 
         #nameadvisor:hover {
-            font-size: 25px;
+            font-size: 23px;
             color: white;
         }
 
@@ -98,9 +98,9 @@
                 <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
                     <div class="navbar-nav text-center" style="font-size: 20px">
                         <a class="nav-item nav-link active" href="{{ url('/about') }}">เกี่ยวกับ<span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" href="#" id="story">เนื้อเรื่องย่อ</a>
-                        <a class="nav-item nav-link" href="#">การจำหน่ายบัตร</a>
-                        <a class="nav-item nav-link disabled" href="#">แผนที่</a>
+                        <a class="nav-item nav-link" href="{{route('index')}}" id="story">เนื้อเรื่องย่อ</a>
+                        <a class="nav-item nav-link" href="{{route('ticket')}}">การจำหน่ายบัตร</a>
+                        <a class="nav-item nav-link" href="{{route('map')}}">แผนที่</a>
                         <a class="nav-item nav-link" href="{{route('payment')}}">ชำระเงิน</a>
                         <a class="nav-item nav-link" href="{{route('checkStatus')}}">ตรวจสอบสถานะ</a>
                         <a class="nav-item nav-link btn-booking text-center" id="booking" href="{{url('/showtimes')}}">สำรองที่นั่ง</a>
@@ -114,12 +114,51 @@
             <h2 class="text-center" style="color: white"><span id="head">ละคอนมะนุด</span> คืออะไร ?</h2>
             <div class="card mt-3 pt-5 pl-5 pb-5 pr-5" style="border-radius: 20px" id="card">
                 <div class="row">
-                    <div class="col-sm">
-                        <img src="{{ asset('images/Untitled-2.jpg')  }}" style="width: 100% ; transition: 1.0s" id="img" >
+                    <div id="demo" class="carousel slide col-sm col-md-12 col-lg" data-ride="carousel">
+                        <ul class="carousel-indicators">
+                            <li data-target="#demo" data-slide-to="0" class="active"></li>
+                            <li data-target="#demo" data-slide-to="1"></li>
+                            <li data-target="#demo" data-slide-to="2"></li>
+                            <li data-target="#demo" data-slide-to="3"></li>
+                            <li data-target="#demo" data-slide-to="4"></li>
+                            <li data-target="#demo" data-slide-to="5"></li>
+                            <li data-target="#demo" data-slide-to="6"></li>
+                        </ul>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{asset('images/1.jpg')}}" style="width: 100%">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{asset('images/2.jpg')}}" style="width: 100%">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{asset('images/3.jpg')}}" style="width: 100%">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{asset('images/4.jpg')}}" style="width: 100%">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{asset('images/5.jpg')}}" style="width: 100%">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{asset('images/6.jpg')}}" style="width: 100%">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{asset('images/7.jpg')}}" style="width: 100%">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
                     </div>
+
+
                     <div class="col-sm mt-5" style="color: white">
-                        <p style="font-size: 22px">&nbsp;&nbsp;&nbsp;&nbsp;ละคอนมะนุด คือละครเวทีที่จัดทำขึ้นโดยนิสิตสาขาสื่อสารมวลชน ภาควิชานิเทศศาสตร์และสารสนเทศศาสตร์ คณะมนุษยศาสตร์ มหาวิทยาลัยเกษตรศาสตร์(บางเขน) ซึ่งเป็นละครเวทีแห่งแรกของมหาวิทยาลัย ที่มีชื่อว่าละคอนมะนุด เนื่องจาก จะให้สอดคล้องกับชื่อคณะ และมีแนวคิดหลักว่าเป็นละครเวทีที่เข้าใจความเป็นมนุษย์ของเราทุกคน ซึ่งมีชื่อย่อว่า
-                            <span id="humdrama">HUMDRAMA</span> มาจาก Humanities Drama โดยได้จัดทำขึ้นติดต่อกันมาถึงครั้งนี้ คือครั้งที่ 26</p>
+                        <p style="font-size: 22px">&nbsp;&nbsp;&nbsp;&nbsp;ละคอนมะนุด หรือ HUMDRAMA คือละครเวทีที่จัดทำขึ้นโดยนิสิตสาขาสื่อสารมวลชน ภาควิชานิเทศศาสตร์และสารสนเทศศาสตร์ คณะมนุษยศาสตร์ มหาวิทยาลัยเกษตรศาสตร์(บางเขน) ซึ่งเป็นละครเวทีแห่งแรกของมหาวิทยาลัย โดยมีชื่อว่าละคอนมะนุด เนื่องจาก จะให้สอดคล้องกับชื่อคณะ และมีแนวคิดหลักว่าเป็นละครเวทีที่เข้าใจความเป็นมนุษย์ของเราทุกคน ซึ่งมีชื่อย่อว่า
+                            <span id="humdrama">HUMDRAMA</span> มาจาก Humanities Drama โดยได้จัดทำขึ้นติดต่อกันมาถึงครั้งนี้ คือครั้งที่ 27</p>
                     </div>
 
                 </div>

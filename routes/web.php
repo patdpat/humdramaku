@@ -60,3 +60,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/payment', [
     'as' => 'payment',
     'uses' => 'GuestController@payment']);
+
+Route::get('/map', [
+    'as' => 'map',
+    'uses' => 'GuestController@map']);
+
+
+Route::get('/ticket', [
+    'as' => 'ticket',
+    'uses' => 'GuestController@ticket']);

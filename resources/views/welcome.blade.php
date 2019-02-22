@@ -90,9 +90,9 @@
                 <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
                     <div class="navbar-nav text-center" style="font-size: 20px">
                         <a class="nav-item nav-link active" href="{{ url('/about') }}">เกี่ยวกับ<span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" href="#" id="story">เนื้อเรื่องย่อ</a>
-                        <a class="nav-item nav-link" href="#">การจำหน่ายบัตร</a>
-                        <a class="nav-item nav-link disabled" href="#">แผนที่</a>
+                        <a class="nav-item nav-link" href="{{route('index')}}" id="story">เนื้อเรื่องย่อ</a>
+                        <a class="nav-item nav-link" href="{{route('ticket')}}">การจำหน่ายบัตร</a>
+                        <a class="nav-item nav-link" href="{{route('map')}}">แผนที่</a>
                         <a class="nav-item nav-link" href="{{route('payment')}}">ชำระเงิน</a>
                         <a class="nav-item nav-link" href="{{route('checkStatus')}}">ตรวจสอบสถานะ</a>
                         <a class="nav-item nav-link btn-booking text-center" id="booking" href="{{url('/showtimes')}}">สำรองที่นั่ง</a>
@@ -101,19 +101,6 @@
             </div>
 
         </nav>
-
-        <div class="container">
-            <div class="card contentMain mt-5">
-                <div class="setMap" >
-                    แผนที่การเดินทาง
-                    <div style="font-size: 18px; color: white">ละคอนมะนุดครั้งที่ 27 เรื่อง “THE TIMEMISSION เดอะไทม์มิชชัน”</div>
-                </div>
-                <div id="block" style="border-radius: 10px ">
-                    <iframe  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3034.118054595773!2d100.56274765340407!3d13.847291889159486!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa0841134b6deda0!2sAgricultural+Museum!5e0!3m2!1sen!2sth!4v1550563580138" width=100% height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-
 
     </div>
 
@@ -127,7 +114,7 @@
             {{--}, 1000);--}}
         {{--})--}}
     {{--</script>--}}
-    @include('sweetalert::alert')`
+    @include('sweetalert::alert')
     </body>
 
 </html>

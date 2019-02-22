@@ -59,9 +59,9 @@
             <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
                 <div class="navbar-nav text-center" style="font-size: 20px">
                     <a class="nav-item nav-link active" href="{{ url('/about') }}">เกี่ยวกับ<span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="#" id="story">เนื้อเรื่องย่อ</a>
-                    <a class="nav-item nav-link" href="#">การจำหน่ายบัตร</a>
-                    <a class="nav-item nav-link disabled" href="#">แผนที่</a>
+                    <a class="nav-item nav-link" href="{{route('index')}}" id="story">เนื้อเรื่องย่อ</a>
+                    <a class="nav-item nav-link" href="{{route('ticket')}}">การจำหน่ายบัตร</a>
+                    <a class="nav-item nav-link" href="{{route('map')}}">แผนที่</a>
                     <a class="nav-item nav-link" href="{{route('payment')}}">ชำระเงิน</a>
                     <a class="nav-item nav-link" href="{{route('checkStatus')}}">ตรวจสอบสถานะ</a>
                     <a class="nav-item nav-link btn-booking text-center" id="booking" href="{{url('/showtimes')}}">สำรองที่นั่ง</a>

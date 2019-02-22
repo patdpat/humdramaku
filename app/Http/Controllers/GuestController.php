@@ -19,6 +19,19 @@ class GuestController extends Controller
         return view('admin.payment');
     }
 
+
+    public function map()
+    {
+        return view('admin.map');
+    }
+
+
+    public function ticket()
+    {
+        return view('admin.ticket');
+    }
+
+
     public function booking(Request $request)
     {
         $validated = $request->validate([
