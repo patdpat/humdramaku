@@ -166,9 +166,9 @@
 
             <div class="col-sm mt-5" >
                 <h2 class="pb-3 text-center" style="color: #f3c15f">อาจารย์ที่ปรึกษาโครงการละครเวทีคณะมนุษยศาสตร์</h2>
-                <div class="card mt-3 pt-3 pl-3 pb-3 pr-3" style="border-radius: 20px">
+                <div class="card mt-3 pt-3 pl-3 pb-3 pr-3 text-center" style="border-radius: 20px">
                     <div>
-                        <img src="{{asset('images/messageImage_1550075652898.jpg')}}" style="width: 100%; transition: 1.0s" id="advisor">
+                        <img src="{{asset('images/messageImage_1550075652898.jpg')}}" style="width: 70%; transition: 1.0s" id="advisor">
                     </div>
 
                     <div class="mt-3 text-center" id="nameadvisor">
