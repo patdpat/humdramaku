@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c6e82f9-c009-4e02-9e7a-3236a34fb464" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GuestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GuestController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/showtimes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/showtimes.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/ticket.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/ticket.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,8 +65,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/showtimes.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="100" column="67" selection-start-line="100" selection-start-column="67" selection-end-line="100" selection-end-column="67" />
+            <state relative-caret-position="285">
+              <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
             </state>
           </provider>
         </entry>
@@ -415,12 +411,12 @@
       <workItem from="1550761025159" duration="1319000" />
       <workItem from="1550762419802" duration="4199000" />
       <workItem from="1550825147588" duration="1238000" />
-      <workItem from="1550844695212" duration="15506000" />
+      <workItem from="1550844695212" duration="15882000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28005000" />
+    <option name="totallyTimeSpent" value="28381000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="836" extended-state="6" />
@@ -698,8 +694,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/showtimes.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="100" column="67" selection-start-line="100" selection-start-column="67" selection-end-line="100" selection-end-column="67" />
+        <state relative-caret-position="285">
+          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
         </state>
       </provider>
     </entry>
