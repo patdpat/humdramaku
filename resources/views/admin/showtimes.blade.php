@@ -98,13 +98,13 @@
                     </div>
                     <div class="row">
                         <div class="col-sm">
-                            <img src="{{ asset('images/tower.jpg')  }}" style="width: 100% ; transition: 1.0s" id="img" >
+                            <img src="{{ asset('images/pre_post.jpg')  }}" style="width: 100% ; transition: 1.0s" id="img" >
                         </div>
                         <div class="col-sm" style="color: white">
                             <div class="mt-5">
                                 <div style="border-bottom: saddlebrown solid 1px">
-                                    <h3>HUMDRAMA || THE TIMEMISSION</h3>
-                                    <p>ละคอนมะนุดครั้งที่ 26 เรื่อง “THE TIMEMISSION เดอะไทม์มิชชัน”</p>
+                                    <h3>HUMDRAMA | Bless You Bully</h3>
+                                    <p>ละคอนมะนุดครั้งที่27 เรื่อง Bless You Bully ตำนานลับ คลับขี้แกล้ง</p>
                                 </div>
 
                                 {!! Form::open(['route' => 'booking', 'method' => 'post']) !!}

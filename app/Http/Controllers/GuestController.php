@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Seat;
 use App\Show;
 use Illuminate\Http\Request;
+use Alert;
 
 class GuestController extends Controller
 {
@@ -70,7 +71,9 @@ class GuestController extends Controller
 //        $id = $request->show;
 //        $orderId = $request->orderID;
 //        return $orderId;
+
 //
+        $count = 0;
         $allseat = explode(',',$request->getseat);
         foreach ($allseat as $seat) {
 //            echo $request->orderID;
@@ -78,6 +81,18 @@ class GuestController extends Controller
 //                echo $seat."<p>";
                 $check = Seat::where('seatnumber',$seat)->where('show_id',$request->show)->where('status',1)->first();
                 if (!$check){
+//
+                }else{
+                    echo "exist";
+                    $count += 1;
+                }
+            }
+        }
+
+        if ($count == 0) {
+            foreach ($allseat as $seat) {
+//            echo $request->orderID;
+                if ($seat!=null) {
                     $information = new Seat(
                         [
                             'show_id' => $request->show,
@@ -90,10 +105,12 @@ class GuestController extends Controller
                         ]
                     );
                     $information->save();
-                }else{
-                    echo "exist <p>";
                 }
             }
+        }
+        else {
+            Alert::warning('การจองล้มเหลว', 'Warning Message')->persistent('Close');;
+            return redirect('/') ;
         }
 
 //

@@ -44,12 +44,12 @@
                 <th>Seat</th>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Status</th>
+                <th>payment</th>
             </tr>
             </thead>
-            <tbody class="text-center" id="addtotable" style="color: white">
+            <tbody class="text-center" id="addtotable" style="color: black">
             <tr>
-                <td colspan="6">No content data</td>
+                <td colspan="7">No content data</td>
             </tr>
             </tbody>
         </table>
