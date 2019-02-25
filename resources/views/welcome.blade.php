@@ -32,14 +32,10 @@
 
             body {
                 font-family: 'Prompt', sans-serif;
-                background-color: #373230;
-            }
+                background-image: url("{{asset('images/bg.jpg')}}");
+                background-attachment: fixed;
 
-            #test {
-                width: 100%;
-            }
-            #test1 {
-                width: 100%;
+                /*background-size: cover;*/
             }
 
             .btn-booking {
@@ -56,23 +52,14 @@
                 margin-left: 20px;
             }
 
-            .setMap {
-                color: #f2c05e;
-                font-size: 40px;
-                /*padding: 30px 0px;*/
-                border-bottom: 1px solid #851a21;
-                margin-bottom: 40px;
-            }
-
-            .contentMain {
-                padding: 40px 50px;
+            .card {
+                transition: 0.5s;
                 background-color: #2b2624;
             }
 
-            #block {
-                padding: 25px 25px;
+            .card:hover {
+                border-color: gray;
             }
-
 
         </style>
     </head>
@@ -104,6 +91,66 @@
 
     </div>
 
+    <div class="container mt-5 col-md-8 col-sm-12">
+        <h2 class="text-center" style="font-size: 40px" >เนื้อเรื่องย่อ</h2>
+        <p class="text-center" style="font-size: 20px">ละคอนมะนุดครั้งที่27 เรื่อง Bless You Bully ตำนานลับ คลับขี้แกล้ง</p>
+        <div class="card mt-3 pt-5 pl-5 pb-5 pr-5" style="border-radius: 20px" id="card">
+            <div class="row">
+                <div id="demo" class="carousel slide col-sm col-md-12 col-lg" data-ride="carousel">
+                    <ul class="carousel-indicators">
+                        {{--<li data-target="#demo" data-slide-to="0" class="active"></li>--}}
+                        {{--<li data-target="#demo" data-slide-to="1"></li>--}}
+                        {{--<li data-target="#demo" data-slide-to="2"></li>--}}
+                        {{--<li data-target="#demo" data-slide-to="3"></li>--}}
+                        {{--<li data-target="#demo" data-slide-to="4"></li>--}}
+                        {{--<li data-target="#demo" data-slide-to="5"></li>--}}
+                        {{--<li data-target="#demo" data-slide-to="6"></li>--}}
+                    </ul>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{{asset('images/trst.jpg')}}" style="width: 100%">
+                        </div>
+                        {{--<div class="carousel-item">--}}
+                            {{--<img src="{{asset('images/2.jpg')}}" style="width: 100%">--}}
+                        {{--</div>--}}
+                        {{--<div class="carousel-item">--}}
+                            {{--<img src="{{asset('images/3.jpg')}}" style="width: 100%">--}}
+                        {{--</div>--}}
+                        {{--<div class="carousel-item">--}}
+                            {{--<img src="{{asset('images/4.jpg')}}" style="width: 100%">--}}
+                        {{--</div>--}}
+                        {{--<div class="carousel-item">--}}
+                            {{--<img src="{{asset('images/5.jpg')}}" style="width: 100%">--}}
+                        {{--</div>--}}
+                        {{--<div class="carousel-item">--}}
+                            {{--<img src="{{asset('images/6.jpg')}}" style="width: 100%">--}}
+                        {{--</div>--}}
+                        {{--<div class="carousel-item">--}}
+                            {{--<img src="{{asset('images/7.jpg')}}" style="width: 100%">--}}
+                        {{--</div>--}}
+                    </div>
+                    {{--<a class="carousel-control-prev" href="#demo" data-slide="prev">--}}
+                        {{--<span class="carousel-control-prev-icon"></span>--}}
+                    {{--</a>--}}
+                    {{--<a class="carousel-control-next" href="#demo" data-slide="next">--}}
+                        {{--<span class="carousel-control-next-icon"></span>--}}
+                    {{--</a>--}}
+                </div>
+
+
+                <div class="col-sm mt-5" style="color: white">
+                    <p style="font-size: 22px">ทุกโรงเรียนย่อมมีตำนาน แต่ที่ ”เซ็นชูซัง” ตำนานกลับกลายเป็นเรื่องจริง เมื่อคำร้องขอของผู้ถูกกลั่นแกล้งและรังแกไม่ถูกเมินเฉย เหล่านักเรียนขาใหญ่ และอันธพาลในโรงเรียนต่างโดนเอาคืนจากสิ่งลี้ลับที่สิงสถิตอยู่ใน ”ศาลเทพเจ้านกกระเรียน”
+
+                        แต่ความจริงภายใต้หน้ากากศาลเทพเจ้านกกระเรียน คือ ชมรมลับที่ทำหน้าที่เป็นวีรบุรุษแก้แค้นแทนเหล่านักเรียนผู้อ่อนแอ ดำเนินการโดยสามสหายผู้มีอุดมการณ์เดียวกัน แต่นิสัยต่างกันสุดขั้ว ได้แก่ ยู มาซาโอะ และ X
+
+                        แต่เส้นทางมักไม่ได้โรยไปด้วยกลีบกุหลาบ เมื่อเกิดเหตุร้ายในโรงเรียนที่อาจจะทำให้ตัวตนของพวกเขาถูกเปิดเผย เรื่องราวความวุ่นวายในโรงเรียนเซ็นชูซังจะเป็นอย่างไรต่อไป ติดตามชมได้ใน Bless You Bully! ตำนานลับคลับขี้แกล้ง</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <p class="text-center mt-3" style="color: white"><span style="font-size: 20px">© </span>2017 HUMDRAMA All Rights Reserved</p>
 
 
     {{--<script>--}}

@@ -19,7 +19,8 @@
         body {
             /*background-image: url("https://images.unsplash.com/photo-1532469342119-c1ac6eb66912?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80");*/
             /*background-size: cover;*/
-            background-color: #373230;
+            /*background-color: #373230;*/
+            background-image: url("{{asset('images/bg.jpg')}}");
             font-family: 'Prompt', sans-serif;
             color: white;
 
@@ -84,7 +85,7 @@
         </nav>
 
         <div class="container mt-5 col-md-8 col-sm-12">
-            <h2 class="pb-3" style="border-bottom: #4c110f solid 2px ; color: #f3c15f">สำรองที่นั่ง <span style="font-size: 15px ; color: white">ละคอนมะนุดครั้งที่27 เรื่อง Bless You Bully ตำนานลับ คลับขี้แกล้ง</span></h2>
+            <h2 class="pb-3" style="border-bottom: #4c110f solid 2px ; color: black ">สำรองที่นั่ง <span style="font-size: 15px">ละคอนมะนุดครั้งที่27 เรื่อง Bless You Bully ตำนานลับ คลับขี้แกล้ง</span></h2>
 
             <div class="container text-center">
                 <div class="mt-4 card pl-2 pt-2 pb-2 pr-2" id="block">เลือกรอบการแสดง</div>

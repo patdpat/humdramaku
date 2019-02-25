@@ -32,7 +32,10 @@
 
         body {
             font-family: 'Prompt', sans-serif;
-            background-color: #373230;
+            /*background-color: #373230;*/
+            background-image: url("{{asset('images/bg.jpg')}}");
+            background-attachment: fixed;
+
         }
 
 
@@ -99,7 +102,7 @@
 
 
     <div class="container-fluid mt-5 ml-5 ">
-        <h1 style="border-bottom: 1px solid #851a21;color: white ; padding: 30px 0px">ช่องทางในการจำหน่ายบัตร</h1>
+        <h1 style="border-bottom: 1px solid #851a21 ; padding: 30px 0px">ช่องทางในการจำหน่ายบัตร</h1>
     </div>
 
     <div class="container-fluid mt-5 row mb-5" style="color: white">

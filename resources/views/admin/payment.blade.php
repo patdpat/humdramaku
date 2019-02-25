@@ -16,8 +16,10 @@
     <style>
 
         body {
-            background-color: #373230;
+            /*background-color: #373230;*/
             font-family: 'Prompt', sans-serif;
+            background-image: url("{{asset('images/bg.jpg')}}");
+            background-attachment: fixed;
         }
         .btn-booking {
             background-color: #2b4657;
@@ -65,19 +67,20 @@
     </div>
 
     <div class="container">
-        <div class="mt-5" style="color: white;">
+        <div class="mt-5" style="color: black;">
             <h1 style="padding: 20px 0px; border-bottom: 2px solid #851a21">Payment</h1>
         </div>
         <div style="font-size: 14px">
-            <p style="color: white">ขั้นตอนการใช้งาน
-                <br>- กรอก order id ของท่าน
+            <p style="color: black">ขั้นตอนการใช้งาน
+                <br>- กรอก Order id ของท่าน
                 <br>- แนบ สลิป หรือ บิล ที่ท่านได้โอนเงิน
                 <br>- รอตรวจสอบสถานะการชำระเงิน ( ใช้เวลาประมาณ 1-2 วัน )
                 <br>- ตรวจสอบสถานะได้ที่ <a href="{{route('checkStatus')}}"> click </a>
             </p>
         </div>
         <div class="card mt-5" style="background-color: #2b2624; border-radius: 20px ; padding: 20px 20px">
-            <p class="text-center" style="color: white ; font-size: 23px ; padding: 10px 0px">กรุณากรอกเลข Order id และอัพโหลดหลักฐานการโอนเงินของท่าน</p>
+            <p class="text-center" style="color: white ; font-size: 23px ; padding: 10px 0px">กรุณากรอกเลข Order id และอัพโหลดหลักฐานการโอนเงินของท่าน
+                <br><span style="font-size: 15px">เลข Order id ของท่านจะถูกส่งไปยัง email ของท่าน</span></p>
             <div class=" container row">
                 <div class="col-sm text-center">
                     <i style="font-size: 200px ; color: black ; padding: 50px 50px" class="fas fa-hand-holding-usd"></i>
@@ -85,15 +88,29 @@
                 </div>
 
                 <div class="col-sm mt-5" style="color: white">
-                    Order id
-                    <input type="text" class="form-control mt-2" id="orderid" placeholder="Enter a order number."><br>
+
+                    {!! Form::open(['route' => 'pay', 'method' => 'post' ,'files'=>true] ) !!}
+                    <input type="text" class="form-control mt-2" id="orderid" name="orderid" placeholder="Enter a order number." value="{{empty($orderId) ? '':$orderId}}"><br>
                     อัพโหลดรูปหลักฐานการโอนเงินของท่าน
+
                     <div class="custom-file mt-2">
-                        <input type="file" class="custom-file-input" id="customFile">
+                        {{--<input type="file" class="custom-file-input" id="customFile" accept="image/*">--}}
+                        <input accept="image/*" type="file" class="custom-file-input" name="filepath" id="filepath " data-toggle="tooltip" data-placement="bottom" title="*If file not modified, no need to re-upload.*" onchange="$(this).next().after().text($(this).val().split('\\').slice(-1)[0])">
                         <label class="custom-file-label" for="customFile">Choose file</label>
                     </div>
 
-                    <button type="button" class="btn btn-success mt-4" style="width: 100%">Send</button>
+                    @if ($errors->any())
+                        <div class="mt-3">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li class="text-danger">{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    <button type="submit" class="btn btn-success mt-4" style="width: 100%">Send</button>
+                    {!! Form::close() !!}
+
 
                 </div>
             </div>

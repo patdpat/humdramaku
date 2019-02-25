@@ -11,6 +11,29 @@
 |
 */
 
+
+
+
+Route::get('files/payment/{filename}', function($filename)
+{
+    $filePath = storage_path().'/payment/'.$filename;
+
+    if (!File::exists($filePath))
+    {
+        return Response::make("File does not exist.", 404);
+    }
+
+    $fileContents = File::get($filePath);
+
+    return Response::make($fileContents,200);
+//
+//     Image
+//    return Response::make($fileContents, 200);
+});
+
+
+
+
 Route::get('/', [
     'as' => 'index',
     'uses' => 'GuestController@index']);
@@ -69,3 +92,18 @@ Route::get('/map', [
 Route::get('/ticket', [
     'as' => 'ticket',
     'uses' => 'GuestController@ticket']);
+
+Route::get('/test', function () {
+    return view('emails.test' , ['orderid'=>'A' , 'showSeat'=>'B' , 'name'=>'C']);
+});
+
+
+Route::post('/pay', [
+    'as' => 'pay',
+    'uses' => 'GuestController@pay']);
+
+
+Route::post('/changeStatus', [
+    'as' => 'changeStatus',
+    'uses' => 'CheckStatus@changeStatus']);
+

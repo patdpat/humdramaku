@@ -22,6 +22,7 @@
             /*background-image: url("https://images.unsplash.com/photo-1532469342119-c1ac6eb66912?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80");*/
             /*background-size: cover;*/
             background-color: #373230;
+            {{--background-image: url("{{asset('images/bg.jpg')}}");--}}
             font-family: 'Prompt', sans-serif;
             color: white;
 
@@ -84,6 +85,15 @@
             cursor: pointer;
         }
 
+        .boxseat {
+            width: 70px;
+            border: 1px solid red;
+            display: inline-block;
+            margin-right: 6px;
+            border-radius: 6px;
+            margin-bottom: 5px;
+        }
+
     </style>
 
 </head>
@@ -114,6 +124,7 @@
     </nav>
 
     <div class="container mt-3 col-md-11" style="width: 1520px">
+
         <div class="card">
             <h2 class="text-center mt-2" style="color: gray">STAGE</h2>
         </div>
@@ -604,7 +615,7 @@
                                 <input type="hidden" name="show" value="{{request()->query('show')}}">
                                 <div class="modal-body">
                                     <input type="hidden" name="getseat" id="blockinput" >
-                                    <input type="hidden" name="orderID" value="{{\Illuminate\Support\Str::random(16)}}">
+                                    <input type="hidden" name="getPrice" id="getPrice">
                                     <div class="allseat" ></div>
                                     ราคารวม : <span name="price" id="price"></span> บาท
                                     <div>
@@ -657,33 +668,35 @@
                     console.log(arr.length)
                     count += 1;
                     if (arr.length == 1) {
-                        $('#showseat').append(arr[0]);
+                        $('#showseat').append("<div class='boxseat'>"+arr[0]+"</div>");
                     }
                     else {
                         $('#showseat').text("");
                         $.each(arr , function (key, value) {
                             console.log(key + ": " + value);
-                            $('#showseat').append(value+',');
+                            $('#showseat').append("<div class='boxseat'>"+value+"</div>");
+                            // $('#showseat').append(value+' ');
+                            // $('#showseat').append("</div>");
                         })
                     }
 
-                    $('#totalprice').text(price+=200);
+                    $('#totalprice').text(price+=150);   // แก้ราคาตอนครบ 300 คน 150 -> 250
                 }else{
                     $(this).attr('src','{{asset("images/seat.png")}}');
                     arr.splice($.inArray($(this).attr('id'), arr),1);
                     if (arr.length == 1) {
                         $('#showseat').text("");
-                        $('#showseat').append(arr[0]);
-                        $('#totalprice').text(price-=200);
+                        $('#showseat').append("<div class='boxseat'>"+arr[0]+"</div>");
+                        $('#totalprice').text(price-=150);  // แก้ราคาตอนครบ 300 คน   150 -> 250
 
                     }
                     else {
                         $('#showseat').text("");
                         $.each(arr , function (key, value) {
                             console.log(key + ": " + value);
-                            $('#showseat').append(value+',');
+                            $('#showseat').append("<div class='boxseat'>"+value+"</div>");
                         })
-                        $('#totalprice').text(price-=200);
+                        $('#totalprice').text(price-=150);  // แก้ราคาตอนครบ 300 คน   150 -> 250
                     }
 
                     count -=1 ;
@@ -699,16 +712,18 @@
                 $('.allseat').append(arr[0]);
                 $('#blockinput').val(arr[0]);
                 $('#price').text($('#totalprice').text());
+                $('#getPrice').val($('#totalprice').text());
             }
             else {
                 $('.allseat').text("");
                 $.each(arr , function (key, value) {
                     console.log(key + ": " + value);
-                    $('.allseat').append(value+',');
+                    $('.allseat').append(value+' ');
 
                 })
                 $('#blockinput').val($('.allseat').text());
                 $('#price').text($('#totalprice').text());
+                $('#getPrice').val($('#totalprice').text());
             }
 
 

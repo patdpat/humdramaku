@@ -32,7 +32,8 @@
 
         body {
             font-family: 'Prompt', sans-serif;
-            background-color: #373230;
+            /*background-color: #373230;*/
+            background-image: url("{{asset('images/bg.jpg')}}");
         }
 
         #test {

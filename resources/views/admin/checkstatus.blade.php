@@ -14,8 +14,10 @@
     <style>
 
         body {
-            background-color: #373230;
+            /*background-color: #373230;*/
             font-family: 'Prompt', sans-serif;
+            background-image: url("{{asset('images/bg.jpg')}}");
+            background-attachment: fixed;
 
         }
 
@@ -73,11 +75,11 @@
 </div>
 
 <div class="container mt-5 ">
-    <div style="color: white; font-size: 40px ; border-bottom: 3px solid #2c4657">สถานะคำสั่งซื้อ</div>
+    <div style="color: black; font-size: 40px ; border-bottom: 3px solid #2c4657">สถานะคำสั่งซื้อ</div>
 
 
     <div>
-        <p class="pr-5 text-center mt-3" style="color: white">กรุณาใส่เลข Order ID ของท่าน </p>
+        <p class="pr-5 text-center mt-3" style="color: black">กรุณาใส่เลข Order ID ของท่าน </p>
     </div>
 
 

@@ -23,4 +23,29 @@ class CheckStatus extends Controller
             'data' => $arrayOrderid
         ]);
     }
+
+
+
+    public function changeStatus(Request $request) {
+//        echo $request->orderid ;
+//        echo $allseat[1];
+        $orderID = explode('-',$request->orderid);
+        if ($orderID[0] == 'Accept') {
+            $statusSeat = Seat::where('orderid',$orderID[1])->get();
+            foreach ($statusSeat as $statusSeat){
+                $statusSeat->status = 2;
+                $statusSeat->save();
+            }
+
+        }
+
+        else if ($orderID[0] == 'Decided') {
+            $statusSeat = Seat::where('orderid',$orderID[1])->get();
+            foreach ($statusSeat as $statusSeat){
+                $statusSeat->status = 0;
+                $statusSeat->save();
+            }
+        }
+
+    }
 }

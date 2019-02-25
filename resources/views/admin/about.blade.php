@@ -29,7 +29,7 @@
         }
 
         #head {
-            color: #f2c05e;
+            color: #2c4657;
         }
 
         .card {
@@ -54,9 +54,11 @@
 
         body {
             /*background-image: url("https://images.unsplash.com/photo-1532469342119-c1ac6eb66912?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80");*/
-            background-size: cover;
+            /*background-size: cover;*/
             font-family: 'Prompt', sans-serif;
-            background-color: #373230;
+            background-attachment: fixed;
+            /*background-color: #373230;*/
+            background-image: url("{{asset('images/bg.jpg')}}");
         }
 
         #img:hover{
@@ -111,7 +113,7 @@
         </nav>
 
         <div class="container mt-5 col-md-8 col-sm-12">
-            <h2 class="text-center" style="color: white"><span id="head">ละคอนมะนุด</span> คืออะไร ?</h2>
+            <h2 class="text-center" style="color: black"><span id="head">ละคอนมะนุด</span> คืออะไร ?</h2>
             <div class="card mt-3 pt-5 pl-5 pb-5 pr-5" style="border-radius: 20px" id="card">
                 <div class="row">
                     <div id="demo" class="carousel slide col-sm col-md-12 col-lg" data-ride="carousel">
@@ -165,7 +167,7 @@
             </div>
 
             <div class="col-sm mt-5" >
-                <h2 class="pb-3 text-center" style="color: #f3c15f">อาจารย์ที่ปรึกษาโครงการละครเวทีคณะมนุษยศาสตร์</h2>
+                <h2 class="pb-3 text-center" style="color: #2c4657">อาจารย์ที่ปรึกษาโครงการละครเวทีคณะมนุษยศาสตร์</h2>
                 <div class="card mt-3 pt-3 pl-3 pb-3 pr-3 text-center" style="border-radius: 20px">
                     <div>
                         <img src="{{asset('images/messageImage_1550075652898.jpg')}}" style="width: 70%; transition: 1.0s" id="advisor">
@@ -178,7 +180,7 @@
             </div>
 
             <div class="col-sm mt-5" style="margin-bottom: 200px">
-                <h2 class="pb-3 text-center" style="color: #f3c15f">ประวัติรายชื่อละครเวทีคณะมนุษยศาสตร์</h2>
+                <h2 class="pb-3 text-center" style="color: #2c4657">ประวัติรายชื่อละครเวทีคณะมนุษยศาสตร์</h2>
                 <div class="row" style="color: white">
                     <div class="col-12 col-md-4 col-sm-6 d-flex align-items-stretch">
                         <div class="card mt-3 pt-3 pl-3 pb-3 pr-3 text-center" style="border-radius: 20px ; width: 100%">
