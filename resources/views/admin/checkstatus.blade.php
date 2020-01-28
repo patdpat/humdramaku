@@ -6,7 +6,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 
-    <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/stylesheet.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/override.css')}}">
     <link rel="shortcut icon" type="image/png" href="{{asset('images/logo.png')}}">
 
     <title>HUMDRAMA</title>
@@ -17,7 +18,7 @@
             /*background-color: #373230;*/
             background-size: cover;
 
-            font-family: 'Prompt', sans-serif;
+            font-family: 'rsuregular';
             background-image: url("{{asset('images/bg.jpg')}}");
             background-attachment: fixed;
 

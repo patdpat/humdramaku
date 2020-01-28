@@ -8,7 +8,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-    <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/stylesheet.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('css/override.css')}}">
     <link rel="shortcut icon" type="image/png" href="{{asset('images/logo.png')}}">
 
     <title>HUMDRAMA</title>
@@ -17,7 +18,7 @@
 
         body {
             /*background-color: #373230;*/
-            font-family: 'Prompt', sans-serif;
+            font-family: 'rsuregular';
             background-image: url("{{asset('images/bg.jpg')}}");
             background-attachment: fixed;
             background-size: cover;

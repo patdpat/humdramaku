@@ -27,11 +27,12 @@
 
         <link rel="shortcut icon" type="image/png" href="{{asset('images/logo.png')}}">
 
-        <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{asset('css/stylesheet.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('css/override.css')}}">
         <style>
 
             body {
-                font-family: 'Prompt', sans-serif;
+                font-family: 'rsuregular';
                 background-image: url("{{asset('images/bg.jpg')}}");
                 background-attachment: fixed;
             background-size: cover;
@@ -72,7 +73,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #63308f" id="nav">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}"><img style="width: 150px" src="{{asset('images/logo.png')}}"></a>
+                <a class="navbar-brand" href="{{ url('/overview') }}"><img style="width: 150px" src="{{asset('images/logo.png')}}"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>

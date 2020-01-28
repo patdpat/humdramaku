@@ -72,7 +72,7 @@ section {
 
 body {
   margin: 0;
-  font-family: Nunito, sans-serif;
+  font-family: 'rsuregular';;
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
@@ -5674,7 +5674,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: Nunito, sans-serif;
+  font-family: 'rsuregular';;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -5797,7 +5797,7 @@ button.close {
   left: 0;
   z-index: 1060;
   max-width: 276px;
-  font-family: Nunito, sans-serif;
+  font-family: 'rsuregular';;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;

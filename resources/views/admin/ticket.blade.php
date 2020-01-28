@@ -27,11 +27,12 @@
 
     <link rel="shortcut icon" type="image/png" href="{{asset('images/logo.png')}}">
 
-    <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/stylesheet.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('css/override.css')}}">
     <style>
 
         body {
-            font-family: 'Prompt', sans-serif;
+            font-family: 'rsuregular';
             /*background-color: #373230;*/
             background-image: url("{{asset('images/bg.jpg')}}");
             background-attachment: fixed;
@@ -41,7 +42,7 @@
 
 
         .btn-booking {
-            background-color: #2b4657;
+            background-color: #f2c05e;
             border-radius: 5px;
 
         }

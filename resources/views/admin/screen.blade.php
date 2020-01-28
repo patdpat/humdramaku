@@ -11,7 +11,8 @@
 
 
     <title>HUMDRAMA</title>
-    <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/stylesheet.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('css/override.css')}}">
 
 
 
@@ -23,7 +24,7 @@
             /*background-size: cover;*/
             background-color: #373230;
             {{--background-image: url("{{asset('images/bg.jpg')}}");--}}
-            font-family: 'Prompt', sans-serif;
+            font-family: 'rsuregular';
             color: white;
             background-size: cover;
 

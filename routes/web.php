@@ -38,6 +38,10 @@ Route::get('/', [
     'as' => 'index',
     'uses' => 'GuestController@index']);
 
+Route::get('/overview', function() {
+    return view('admin.overview');
+});
+
 Route::get('/about', function () {
     return view('admin.about');
 });

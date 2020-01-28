@@ -1,0 +1,52 @@
+body {
+  color: white !important;
+}
+
+.card {
+  background-color: #63308f !important;
+}
+
+.overview-poster {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.overview-section {
+  padding: 10px;
+  background: #63308f;
+  margin: 3px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.event-date {
+  text-align: center;
+  font-family: "rsulight";
+  font-size: 2rem;
+}
+
+.event-month {
+  text-align: center;
+  margin-top: -10px;
+}
+
+.shows-wrapper {
+  margin-top: -9px;
+}
+
+.shows-section {
+  background: #63308f;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.small-icon {
+  width: 20px;
+}
+
+.icon-wrapper {
+  padding: 5px;
+  text-align: right;
+}
