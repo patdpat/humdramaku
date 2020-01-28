@@ -34,6 +34,8 @@
                 font-family: 'Prompt', sans-serif;
                 background-image: url("{{asset('images/bg.jpg')}}");
                 background-attachment: fixed;
+            background-size: cover;
+
 
                 /*background-size: cover;*/
             }
@@ -70,7 +72,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #f2c05e" id="nav">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}"><img src="{{asset('images/logo.png')}}"></a>
+                <a class="navbar-brand" href="{{ url('/') }}"><img style="width: 150px" src="{{asset('images/logo.png')}}"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -93,7 +95,7 @@
 
     <div class="container mt-5 col-md-8 col-sm-12">
         <h2 class="text-center" style="font-size: 40px" >เนื้อเรื่องย่อ</h2>
-        <p class="text-center" style="font-size: 20px">ละคอนมะนุดครั้งที่27 เรื่อง Bless You Bully ตำนานลับ คลับขี้แกล้ง</p>
+        <p class="text-center" style="font-size: 20px">ละคอนมะนุดครั้งที่28 Powerful You Are ประลองป่วนรัก พลังป่วนโลก</p>
         <div class="card mt-3 pt-5 pl-5 pb-5 pr-5" style="border-radius: 20px" id="card">
             <div class="row">
                 <div id="demo" class="carousel slide col-sm col-md-12 col-lg" data-ride="carousel">
@@ -139,11 +141,7 @@
 
 
                 <div class="col-sm mt-5" style="color: white">
-                    <p style="font-size: 22px">ทุกโรงเรียนย่อมมีตำนาน แต่ที่ ”เซ็นชูซัง” ตำนานกลับกลายเป็นเรื่องจริง เมื่อคำร้องขอของผู้ถูกกลั่นแกล้งและรังแกไม่ถูกเมินเฉย เหล่านักเรียนขาใหญ่ และอันธพาลในโรงเรียนต่างโดนเอาคืนจากสิ่งลี้ลับที่สิงสถิตอยู่ใน ”ศาลเทพเจ้านกกระเรียน”
-
-                        แต่ความจริงภายใต้หน้ากากศาลเทพเจ้านกกระเรียน คือ ชมรมลับที่ทำหน้าที่เป็นวีรบุรุษแก้แค้นแทนเหล่านักเรียนผู้อ่อนแอ ดำเนินการโดยสามสหายผู้มีอุดมการณ์เดียวกัน แต่นิสัยต่างกันสุดขั้ว ได้แก่ ยู มาซาโอะ และ X
-
-                        แต่เส้นทางมักไม่ได้โรยไปด้วยกลีบกุหลาบ เมื่อเกิดเหตุร้ายในโรงเรียนที่อาจจะทำให้ตัวตนของพวกเขาถูกเปิดเผย เรื่องราวความวุ่นวายในโรงเรียนเซ็นชูซังจะเป็นอย่างไรต่อไป ติดตามชมได้ใน Bless You Bully! ตำนานลับคลับขี้แกล้ง</p>
+                    <p style="font-size: 22px">แท้จริงแล้ว...โลกของเรายังมีผู้มีพลังพิเศษ ที่ถูกเรียกว่า EP หรือ Extraordinary People ปะปนอยู่ และทุก 4 ปี พวกเขาเหล่านี้จะมารวมตัวกัน เพื่อชิงการเป็นหนึ่งในการแข่งขัน ‘ทอม’ นายตำรวจหน่วยพิเศษประจำสังคม EP ได้รับมอบหมายให้มาดูแลความเรียบร้อยภายในงาน แต่กลับต้องประหลาดใจเมื่อพบว่า ‘เอ็มม่า’ แฟนสาวของเขาที่เป็นเพียงคนธรรมดาถูกส่งเข้ามาในการแข่งขันนี้อย่างไม่ชอบมาพากล ทอมจึงต้องสืบหาความจริง และแก้ไขความวุ่นวายต่างๆที่เกิดขึ้น</p>
                 </div>
 
             </div>

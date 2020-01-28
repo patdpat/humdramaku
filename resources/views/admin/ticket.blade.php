@@ -35,6 +35,7 @@
             /*background-color: #373230;*/
             background-image: url("{{asset('images/bg.jpg')}}");
             background-attachment: fixed;
+            background-size: cover;
 
         }
 
@@ -81,7 +82,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #f2c05e" id="nav">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}"><img src="{{asset('images/logo.png')}}"></a>
+            <a class="navbar-brand" href="{{ url('/') }}"><img style="width: 150px" src="{{asset('images/logo.png')}}"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

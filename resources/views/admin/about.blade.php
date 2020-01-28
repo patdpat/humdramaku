@@ -54,7 +54,7 @@
 
         body {
             /*background-image: url("https://images.unsplash.com/photo-1532469342119-c1ac6eb66912?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80");*/
-            /*background-size: cover;*/
+            background-size: cover;
             font-family: 'Prompt', sans-serif;
             background-attachment: fixed;
             /*background-color: #373230;*/
@@ -93,7 +93,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #f2c05e" id="nav">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}"><img src="{{asset('images/logo.png')}}"></a>
+                <a class="navbar-brand" href="{{ url('/') }}"><img style="width: 150px" src="{{asset('images/logo.png')}}"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -125,6 +125,9 @@
                             <li data-target="#demo" data-slide-to="4"></li>
                             <li data-target="#demo" data-slide-to="5"></li>
                             <li data-target="#demo" data-slide-to="6"></li>
+                            <li data-target="#demo" data-slide-to="7"></li>
+                            <li data-target="#demo" data-slide-to="8"></li>
+                            <li data-target="#demo" data-slide-to="9"></li>
                         </ul>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -148,6 +151,15 @@
                             <div class="carousel-item">
                                 <img src="{{asset('images/7.jpg')}}" style="width: 100%">
                             </div>
+                            <div class="carousel-item">
+                                <img src="{{asset('images/8.jpg')}}" style="width: 100%">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{asset('images/9.jpeg')}}" style="width: 100%">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{asset('images/10.jpg')}}" style="width: 100%">
+                            </div>
                         </div>
                         <a class="carousel-control-prev" href="#demo" data-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
@@ -159,8 +171,8 @@
 
 
                     <div class="col-sm mt-5" style="color: white">
-                        <p style="font-size: 22px">&nbsp;&nbsp;&nbsp;&nbsp;ละคอนมะนุด หรือ HUMDRAMA คือละครเวทีที่จัดทำขึ้นโดยนิสิตสาขาสื่อสารมวลชน ภาควิชานิเทศศาสตร์และสารสนเทศศาสตร์ คณะมนุษยศาสตร์ มหาวิทยาลัยเกษตรศาสตร์(บางเขน) ซึ่งเป็นละครเวทีแห่งแรกของมหาวิทยาลัย โดยมีชื่อว่าละคอนมะนุด เนื่องจาก จะให้สอดคล้องกับชื่อคณะ และมีแนวคิดหลักว่าเป็นละครเวทีที่เข้าใจความเป็นมนุษย์ของเราทุกคน ซึ่งมีชื่อย่อว่า
-                            <span id="humdrama">HUMDRAMA</span> มาจาก Humanities Drama โดยได้จัดทำขึ้นติดต่อกันมาถึงครั้งนี้ คือครั้งที่ 27</p>
+                        <p style="font-size: 22px">&nbsp;&nbsp;&nbsp;&nbsp;“ละคอนมะนุด” คือละครเวทีประจำคณะมนุษยศาสตร์ ภาควิชานิเทศศาสตร์และสารสนเทศศาสตร์ มหาวิทยาลัยเกษตรศาสตร์(บางเขน) มีแนวคิดหลักว่าเป็นละครเวทีที่เข้าใจความเป็นมนุษย์ของเราทุกคน ซึ่งมีชื่อย่อในภาษาอังกฤษว่า
+                            <span id="humdrama">HUMDRAMA</span> มาจาก Humanities Drama สร้างสรรค์เป็นละครเวที โดยนำความรู้จากแขนงต่างๆที่ได้ศึกษามาปฏิบัติใช้จริงให้เห็นเป็นรูปธรรมมากยิ่งขึ้น ภายใต้การดูแลของคณาจารย์และศิษย์เก่าที่ชำนาญผ่านกระบวนการหลายๆขั้นตอน ต้องใช้ความร่วมมือกับทุกฝ่าย ทำให้เกิดการเรียนรู้กระบวนการทำงานร่วมกับผู้อื่น ก่อให้เกิดความสามัคคี ซึ่งเป็นพื้นฐานที่ดีให้กับนิสิตในการประยุกต์ใช้สู่สังคมส่วนรวมต่อไป</p>
                     </div>
 
                 </div>
@@ -170,11 +182,29 @@
                 <h2 class="pb-3 text-center" style="color: #2c4657">อาจารย์ที่ปรึกษาโครงการละครเวทีคณะมนุษยศาสตร์</h2>
                 <div class="card mt-3 pt-3 pl-3 pb-3 pr-3 text-center" style="border-radius: 20px">
                     <div>
-                        <img src="{{asset('images/messageImage_1550075652898.jpg')}}" style="width: 70%; transition: 1.0s" id="advisor">
+                        <img src="{{asset('images/teacher1.png')}}" style="width: 30%; transition: 1.0s" id="advisor">
                     </div>
 
                     <div class="mt-3 text-center" id="nameadvisor">
-                        <p>ผู้ช่วยศาสตราจารย์.ดร พรทิพย์ เย็นจะบก</p>
+                        <p>อาจารย์ ขจร ฝ้ายเทศ</p>
+                    </div>
+                </div>
+                <div class="card mt-3 pt-3 pl-3 pb-3 pr-3 text-center" style="border-radius: 20px">
+                    <div>
+                        <img src="{{asset('images/teacher2.png')}}" style="width: 30%; transition: 1.0s" id="advisor">
+                    </div>
+
+                    <div class="mt-3 text-center" id="nameadvisor">
+                        <p>อาจารย์ ดร. วราพรรณ อภิศุภโชค</p>
+                    </div>
+                </div>
+                <div class="card mt-3 pt-3 pl-3 pb-3 pr-3 text-center" style="border-radius: 20px">
+                    <div>
+                        <img src="{{asset('images/teacher3.jpg')}}" style="width: 30%; transition: 1.0s" id="advisor">
+                    </div>
+
+                    <div class="mt-3 text-center" id="nameadvisor">
+                        <p>อาจารย์ ปิยภัทร คงแสนคำ</p>
                     </div>
                 </div>
             </div>
@@ -295,9 +325,20 @@
                         <div class="card mt-3 pt-3 pl-3 pb-3 pr-3 text-center" style="border-radius: 20px ; width: 100%">
                             <p>ครั้งที่ 24 พ.ศ.2559 April Rain เมื่อเมษาคือหน้าฝน</p>
                         </div>
-                    </div> <div class="col-12 col-md-4 col-sm-6 d-flex align-items-stretch">
+                    </div> 
+                    <div class="col-12 col-md-4 col-sm-6 d-flex align-items-stretch">
                         <div class="card mt-3 pt-3 pl-3 pb-3 pr-3 text-center" style="border-radius: 20px ; width: 100%">
                             <p>ครั้งที่ 25 พ.ศ.2560 One Last Time กาลครั้งหนึ่งเมื่อฉันเห็นเธอ</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-sm-6 d-flex align-items-stretch">
+                        <div class="card mt-3 pt-3 pl-3 pb-3 pr-3 text-center" style="border-radius: 20px ; width: 100%">
+                            <p>ครั้งที่ 26 พ.ศ.2561 เดอะ ไทม์มิชชัน</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 col-sm-6 d-flex align-items-stretch">
+                        <div class="card mt-3 pt-3 pl-3 pb-3 pr-3 text-center" style="border-radius: 20px ; width: 100%">
+                            <p>ครั้งที่ 27 พ.ศ.2562 Bless You Bully ตำนานลับ คลับขี้แกล้ง</p>
                         </div>
                     </div>
                 </div>
