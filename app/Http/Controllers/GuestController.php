@@ -109,7 +109,6 @@ class GuestController extends Controller
         $seatPrice = 0;
         if ($countSeat > 300) {
             $seatPrice = 250;
-
         }
         else {
             $seatPrice = 150;

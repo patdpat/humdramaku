@@ -31,7 +31,7 @@
 
 
         .btn-booking {
-            background-color: #2b4657;
+           background-color: #f2c05e;
             border-radius: 5px;
 
         }
@@ -152,7 +152,7 @@
         <div class="mt-3 setmargin col-md-12" style="cursor: pointer; margin: 0 auto">
             {{--{{ dd($seats) }}--}}
             <table class="mt-2" style="margin: 0px auto">
-                @for ($i = 1; $i < 16; $i++)
+                @for ($i = 15; $i > 0; $i--)
                     @if ($i==1)
                         @php $text = "A"; @endphp
                     @elseif ($i==2)

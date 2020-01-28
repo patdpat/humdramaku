@@ -70,7 +70,7 @@
         }
 
         .btn-booking {
-            background-color: #2b4657;
+            background-color: #f2c05e;
             border-radius: 5px;
 
          }
@@ -91,7 +91,7 @@
 
     <div>
 
-        <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #f2c05e" id="nav">
+        <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #63308f" id="nav">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}"><img style="width: 150px" src="{{asset('images/logo.png')}}"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

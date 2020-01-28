@@ -80,7 +80,7 @@
 <div>
 
 
-    <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #f2c05e" id="nav">
+    <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #63308f" id="nav">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}"><img style="width: 150px" src="{{asset('images/logo.png')}}"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -108,40 +108,24 @@
 
     <div class="container-fluid mt-5 row mb-5" style="color: white">
         <div class="mt-3 ml-5 card col-sm" style="background-color: #2b2624; padding: 36px 36px;  height: 60%">
-            <p class="text-center" style="font-size: 25px;padding: 20px 20px ; border-bottom: 1px solid black">จองบัตรได้ที่</p>
-            <a class="mt-3" style=" font-size: 20px;" href="https://www.humdramaku.com" target="_blank">www.humdramaku.com</a>
-            <p class="mt-3" style="font-size: 20px">บูธละคอนมะนุดใต้ศูนย์เรียนรวม 3 (ศร.3)</p>
+            <p class="text-center" style="font-size: 25px;padding: 20px 20px ; border-bottom: 1px solid black">วิธีการจองบัตร</p>
+            <h3>ซื้อผ่านเว็บไซต์</h3>
+            <ol>
+                <li>สามารถซื้อได้ที่ลิ้งนี้ <a href="/showtimes">click</a></li>
+                <li>กรอกข้อมูลของท่านให้ครบถ้วน </li>
+                <li>เช็คอีเมลเพื่อเก็บ Order id ไว้ และนำมารับบัตรเพื่อชมการแสดง <br><strong>หากไม่มี Order id ท่านจะไม่สามารถเข้าชมการแสดงได้</strong></li>
+                <li>เมื่อท่านชำระเงินเรียบร้อยแล้ว สามารถยืนยันการชำระเงินได้ที่ <a href="/payment">click</a></li>
+                <li>ตรวจสอบสถานะได้ภายใน 1-2 วันหลังจากชำระเงิน <a href="/checkStatus">click</a></li>
+            </ol>
+            <h3>ซื้อด้วยตนเอง</h3>
+            <p>บูธละคอนมะนุด (สถานที่จะตามไปทีหลัง)</p>
         </div>
 
         <div class="mt-3 ml-5 card col-sm" style="background-color: #2b2624; padding: 33px 30px ; height: 50%">
             <p class="text-center" style="font-size: 25px;padding: 20px 20px ; border-bottom: 1px solid black">สอบถามข้อมูลเพิ่มเติมได้ที่</p>
             <a class="mt-3" style=" font-size: 20px;" href="https://www.facebook.com/humdrama.ku" target="_blank">www.facebook.com/humdrama.ku</a>
-            <p class="mt-3" style="font-size: 20px">โทร 062 - 373 6005</p>
+            <p class="mt-3" style="font-size: 20px">โทร 095-767-3071 (ฟ้า) , 064-224-5451 (เพิร์ธ)</p>
         </div>
-
-
-        <div class="mt-3 ml-5 card" style="background-color: #2b2624; padding: 30px 30px">
-            <p class="text-center" style="font-size: 35px;padding: 20px 20px ">ช่องทางในการชำระเงิน</p>
-            <div class="row">
-                <img class="col-sm-4" src="{{asset('images/bkk_bank.jpg')}}" alt="logo bank">
-
-                <div>
-                    <p class="mt-3 col-sm" style="font-size: 18px">เลขที่บัญชี : <span id="pay">941-020967-1</span></p>
-                    <p class="mt-3 col-sm" style="font-size: 18px">นางสาวพรทิพย์ เย็นจะบก,นางสาวนฤกมล โพธินาม และนางสาวจนิสตา เลิศสนองบุญ</p>
-
-                </div>
-            </div>
-
-            <div class="row mt-5">
-                <img class="col-sm-4" src="{{asset('images/promptPay.jpg')}}" style="width: 100% ; height: 100%" alt="prompt pay">
-                <h3 class="col-sm text-center" style=";margin-top: 15%">หรือ Promptpay</h3>
-            </div>
-
-
-        </div>
-
-
-
 
     </div>
 

@@ -24,7 +24,7 @@
 
         }
         .btn-booking {
-            background-color: #2b4657;
+            background-color: #f2c05e;
             border-radius: 5px;
 
         }
@@ -46,7 +46,7 @@
 
     <div>
 
-        <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #f2c05e" id="nav">
+        <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #63308f" id="nav">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}"><img style="width: 150px" src="{{asset('images/logo.png')}}"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,16 +69,19 @@
     </div>
 
     <div class="container">
-        <div class="mt-5" style="color: black;">
+        <div style="background: rgba(255, 255, 255, 0.8); padding: 0 2rem;">
+            <div class="mt-5" style="color: black;">
             <h1 style="padding: 20px 0px; border-bottom: 2px solid #851a21">Payment</h1>
         </div>
         <div style="font-size: 14px">
-            <p style="color: black">ขั้นตอนการชำระเงิน
-                <br>- กรอก Order id ของท่าน
-                <br>- แนบ สลิป หรือ บิล ที่ท่านได้โอนเงิน
-                <br>- รอตรวจสอบสถานะการชำระเงิน ( ใช้เวลาประมาณ 1-2 วัน )
-                <br>- ตรวจสอบสถานะได้ที่ <a href="{{route('checkStatus')}}"> click </a>
-            </p>
+        <h3>ขั้นตอนการชำระเงิน</h3>
+            <ol>
+                <li>กรอก Order id ของท่าน </li>
+                <li>แนบสลิปการชำระเงิน</li>
+                <li>รอตรวจสอบสถานะการชำระเงิน (ใช้เวลาประมาณ 1-2 วัน)</li>
+                <li>ตรวจสอบสถานะได้ที่ <a href="{{route('checkStatus')}}">click</a></li>
+            </ol>
+        </div>
         </div>
         <div class="card mt-5" style="background-color: #2b2624; border-radius: 20px ; padding: 20px 20px">
             <p class="text-center" style="color: white ; font-size: 23px ; padding: 10px 0px">กรุณากรอกเลข Order id และอัพโหลดหลักฐานการโอนเงินของท่าน
