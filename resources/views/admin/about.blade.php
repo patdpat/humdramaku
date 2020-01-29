@@ -347,10 +347,18 @@
                     </div>
                 </div>
             </div>
+            <div class="col-sm mt-5" >
+                <div class="card mt-3 pt-3 pl-3 pb-3 pr-3 text-center" style="border-radius: 20px">
+                <h2 class="pb-3 text-center" style="color: white">Sponsor</h2>
+                <div>
+                        <img src="{{asset('images/spon1.png')}}" style="width: 100%; transition: 1.0s" >
+                    </div>
+        </div>
 
-            <p class="text-center" style="color: white"><span style="font-size: 20px">© </span>2017 HUMDRAMA All Rights Reserved</p>
+            <p class="text-center" style="color: white"><span style="font-size: 20px">© </span>2020 HUMDRAMA All Rights Reserved</p>
         </div>
     </div>
+    
 
 
 

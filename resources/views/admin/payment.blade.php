@@ -83,6 +83,12 @@
                 <li>ตรวจสอบสถานะได้ที่ <a href="{{route('checkStatus')}}">click</a></li>
             </ol>
         </div>
+        <div class="col-sm mt-5" >
+                <div class="card mt-3 pt-3 pl-3 pb-3 pr-3 text-center" style="border-radius: 20px">
+                <h2 class="pb-3 text-center" style="color: white">QRcode ชำระเงิน</h2>
+                <div>
+                        <img src="{{asset('images/qrcode.png')}}" style="width: 30%; transition: 1.0s" id="advisor">
+                    </div>
         </div>
         <div class="card mt-5" style="background-color: #2b2624; border-radius: 20px ; padding: 20px 20px">
             <p class="text-center" style="color: white ; font-size: 23px ; padding: 10px 0px">กรุณากรอกเลข Order id และอัพโหลดหลักฐานการโอนเงินของท่าน
