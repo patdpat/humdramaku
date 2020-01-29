@@ -67,7 +67,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #351c4b" id="nav">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}"><img style="width: 150px" src="{{asset('images/logo.png')}}"></a>
+                <a class="navbar-brand" href="{{ url('/overview') }}"><img style="width: 150px" src="{{asset('images/logo.png')}}"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -87,7 +87,7 @@
         </nav>
 
         <div class="container mt-5 col-md-8 col-sm-12">
-            <h2 class="pb-3" style="border-bottom: #4c110f solid 2px ; color: black ">สำรองที่นั่ง <span style="font-size: 15px">ละคอนมะนุดครั้งที่27 เรื่อง Bless You Bully ตำนานลับ คลับขี้แกล้ง</span></h2>
+            <h2 class="pb-3" style="border-bottom: #4c110f solid 2px ; color: black ">สำรองที่นั่ง <span style="font-size: 15px">ละคอนมะนุดครั้งที่28 เรื่อง Powerful You Are ประลองป่วนรัก พลังป่วนโลก</span></h2>
 
             <div class="container text-center">
                 <div class="mt-4 card pl-2 pt-2 pb-2 pr-2" id="block">เลือกรอบการแสดง</div>

@@ -87,7 +87,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #351c4b" id="nav">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}"><img style="width: 150px" src="{{asset('images/logo.png')}}"></a>
+                <a class="navbar-brand" href="{{ url('/overview') }}"><img style="width: 150px" src="{{asset('images/logo.png')}}"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -107,7 +107,7 @@
         </nav>
 
 
-    <div class="container-fluid mt-5 ml-5 ">
+        <div class="card mt-3 pt-3 pl-3 pb-3 pr-3 text-center" style="border-radius: 20px">
         <h1 style="border-bottom: 1px solid #851a21 ; padding: 30px 0px">ช่องทางในการจำหน่ายบัตร</h1>
     </div>
 
