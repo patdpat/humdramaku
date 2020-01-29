@@ -30,12 +30,12 @@
         }
 
         #head {
-            color: #2c4657;
+            color: white;
         }
 
         .card {
             transition: 0.5s;
-            background-color: #2b2624;
+            background-color: #351c4b;
         }
 
         .card:hover {
@@ -71,7 +71,7 @@
         }
 
         .btn-booking {
-            background-color: #f2c05e;
+            background-color: f3b204;
             border-radius: 5px;
 
          }
@@ -92,7 +92,7 @@
 
     <div>
 
-        <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #63308f" id="nav">
+        <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #351c4b" id="nav">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}"><img style="width: 150px" src="{{asset('images/logo.png')}}"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -100,13 +100,13 @@
                 </button>
                 <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
                     <div class="navbar-nav text-center" style="font-size: 20px">
-                        <a class="nav-item nav-link active" href="{{ url('/about') }}">เกี่ยวกับ<span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" href="{{route('index')}}" id="story">เนื้อเรื่องย่อ</a>
-                        <a class="nav-item nav-link" href="{{route('ticket')}}">การจำหน่ายบัตร</a>
-                        <a class="nav-item nav-link" href="{{route('map')}}">แผนที่</a>
-                        <a class="nav-item nav-link" href="{{route('payment')}}">ชำระเงิน</a>
-                        <a class="nav-item nav-link" href="{{route('checkStatus')}}">ตรวจสอบสถานะ</a>
-                        <a class="nav-item nav-link btn-booking text-center" id="booking" href="{{url('/showtimes')}}">สำรองที่นั่ง</a>
+                        <a class="nav-item nav-link active" href="{{ url('/about') }}" style="color : white">เกี่ยวกับ<span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="{{route('index')}}" id="story"  style="color : white">เนื้อเรื่องย่อ</a>
+                        <a class="nav-item nav-link" href="{{route('ticket')}}" style="color : white">การจำหน่ายบัตร</a>
+                        <a class="nav-item nav-link" href="{{route('map')}}" style="color : white">แผนที่</a>
+                        <a class="nav-item nav-link" href="{{route('payment')}}" style="color : white">ชำระเงิน</a>
+                        <a class="nav-item nav-link" href="{{route('checkStatus')}}" style="color : white">ตรวจสอบสถานะ</a>
+                        <a class="nav-item nav-link btn-booking text-center" id="booking" href="{{url('/showtimes')}}" >สำรองที่นั่ง</a>
                     </div>
                 </div>
             </div>
@@ -114,8 +114,9 @@
         </nav>
 
         <div class="container mt-5 col-md-8 col-sm-12">
-            <h2 class="text-center" style="color: black"><span id="head">ละคอนมะนุด</span> คืออะไร ?</h2>
-            <div class="card mt-3 pt-5 pl-5 pb-5 pr-5" style="border-radius: 20px" id="card">
+           
+            <div class="card mt-3 pt-5 pl-5 pb-5 pr-5" style="border-radius: 20px;background-color: #351c4b" id="card">
+            <h2 class="text-center" style="color: white"><span id="head">ละคอนมะนุด</span> คืออะไร ?</h2>
                 <div class="row">
                     <div id="demo" class="carousel slide col-sm col-md-12 col-lg" data-ride="carousel">
                         <ul class="carousel-indicators">
@@ -180,8 +181,15 @@
             </div>
 
             <div class="col-sm mt-5" >
-                <h2 class="pb-3 text-center" style="color: #2c4657">อาจารย์ที่ปรึกษาโครงการละครเวทีคณะมนุษยศาสตร์</h2>
                 <div class="card mt-3 pt-3 pl-3 pb-3 pr-3 text-center" style="border-radius: 20px">
+                <h2 class="pb-3 text-center" style="color: white">อาจารย์ที่ปรึกษาโครงการละครเวทีคณะมนุษยศาสตร์</h2>
+                <div>
+                        <img src="{{asset('images/teacher2.png')}}" style="width: 30%; transition: 1.0s" id="advisor">
+                    </div>
+
+                    <div class="mt-3 text-center" id="nameadvisor">
+                        <p>อาจารย์ ดร. วราพรรณ อภิศุภโชค</p>
+                    </div>
                     <div>
                         <img src="{{asset('images/teacher1.png')}}" style="width: 30%; transition: 1.0s" id="advisor">
                     </div>
@@ -189,17 +197,7 @@
                     <div class="mt-3 text-center" id="nameadvisor">
                         <p>อาจารย์ ขจร ฝ้ายเทศ</p>
                     </div>
-                </div>
-                <div class="card mt-3 pt-3 pl-3 pb-3 pr-3 text-center" style="border-radius: 20px">
-                    <div>
-                        <img src="{{asset('images/teacher2.png')}}" style="width: 30%; transition: 1.0s" id="advisor">
-                    </div>
-
-                    <div class="mt-3 text-center" id="nameadvisor">
-                        <p>อาจารย์ ดร. วราพรรณ อภิศุภโชค</p>
-                    </div>
-                </div>
-                <div class="card mt-3 pt-3 pl-3 pb-3 pr-3 text-center" style="border-radius: 20px">
+                    
                     <div>
                         <img src="{{asset('images/teacher3.jpg')}}" style="width: 30%; transition: 1.0s" id="advisor">
                     </div>
@@ -208,10 +206,15 @@
                         <p>อาจารย์ ปิยภัทร คงแสนคำ</p>
                     </div>
                 </div>
+                </div>
+               
+                <div class="card mt-3 pt-3 pl-3 pb-3 pr-3 text-center" style="border-radius: 20px">
+                <h2 class="pb-3 text-center" >ประวัติรายชื่อละครเวทีคณะมนุษยศาสตร์</h2>
+                    
             </div>
 
             <div class="col-sm mt-5" style="margin-bottom: 200px">
-                <h2 class="pb-3 text-center" style="color: #2c4657">ประวัติรายชื่อละครเวทีคณะมนุษยศาสตร์</h2>
+                
                 <div class="row" style="color: white">
                     <div class="col-12 col-md-4 col-sm-6 d-flex align-items-stretch">
                         <div class="card mt-3 pt-3 pl-3 pb-3 pr-3 text-center" style="border-radius: 20px ; width: 100%">

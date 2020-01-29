@@ -25,7 +25,7 @@
         }
 
         .btn-booking {
-           background-color: #f2c05e;
+           background-color: #351c4b;
             border-radius: 5px;
 
         }

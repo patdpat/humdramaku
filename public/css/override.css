@@ -1,9 +1,9 @@
 body {
-  color: white !important;
+  color: white;
 }
 
 .card {
-  background-color: #63308f !important;
+  background-color: #351c4b;
 }
 
 .overview-poster {
@@ -13,7 +13,7 @@ body {
 
 .overview-section {
   padding: 10px;
-  background: #63308f;
+  background: #351c4b;
   margin: 3px;
   border-radius: 10px;
   font-size: 1.2rem;
@@ -37,7 +37,7 @@ body {
 }
 
 .shows-section {
-  background: #63308f;
+  background: #351c4b;
   border-radius: 10px;
   font-size: 20px;
 }

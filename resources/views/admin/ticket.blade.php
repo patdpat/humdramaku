@@ -40,9 +40,13 @@
 
         }
 
+        li {
+            style = font-size: 50px
+        }
+
 
         .btn-booking {
-            background-color: #f2c05e;
+            background-color: #f3b204;
             border-radius: 5px;
 
         }
@@ -68,6 +72,7 @@
 
         .card {
             transition: 0.5s;
+           background-color: 351c4b;
         }
 
         .card:hover {
@@ -78,29 +83,28 @@
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
-<div>
+    <div>
 
-
-    <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #63308f" id="nav">
-        <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}"><img style="width: 150px" src="{{asset('images/logo.png')}}"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
-                <div class="navbar-nav text-center" style="font-size: 20px">
-                    <a class="nav-item nav-link active" href="{{ url('/about') }}">เกี่ยวกับ<span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="{{route('index')}}" id="story">เนื้อเรื่องย่อ</a>
-                    <a class="nav-item nav-link" href="{{route('ticket')}}">การจำหน่ายบัตร</a>
-                    <a class="nav-item nav-link " href="{{route('map')}}">แผนที่</a>
-                    <a class="nav-item nav-link" href="{{route('payment')}}">ชำระเงิน</a>
-                    <a class="nav-item nav-link" href="{{route('checkStatus')}}">ตรวจสอบสถานะ</a>
-                    <a class="nav-item nav-link btn-booking text-center" id="booking" href="{{url('/showtimes')}}">สำรองที่นั่ง</a>
+        <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #351c4b" id="nav">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url('/') }}"><img style="width: 150px" src="{{asset('images/logo.png')}}"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                    <div class="navbar-nav text-center" style="font-size: 20px">
+                        <a class="nav-item nav-link active" href="{{ url('/about') }}" style="color : white">เกี่ยวกับ<span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="{{route('index')}}" id="story"  style="color : white">เนื้อเรื่องย่อ</a>
+                        <a class="nav-item nav-link" href="{{route('ticket')}}" style="color : white">การจำหน่ายบัตร</a>
+                        <a class="nav-item nav-link" href="{{route('map')}}" style="color : white">แผนที่</a>
+                        <a class="nav-item nav-link" href="{{route('payment')}}" style="color : white">ชำระเงิน</a>
+                        <a class="nav-item nav-link" href="{{route('checkStatus')}}" style="color : white">ตรวจสอบสถานะ</a>
+                        <a class="nav-item nav-link btn-booking text-center" id="booking" href="{{url('/showtimes')}}" style="color : 351c4b">สำรองที่นั่ง</a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-    </nav>
+        </nav>
 
 
     <div class="container-fluid mt-5 ml-5 ">
@@ -112,14 +116,14 @@
             <p class="text-center" style="font-size: 25px;padding: 20px 20px ; border-bottom: 1px solid black">วิธีการจองบัตร</p>
             <h3>ซื้อผ่านเว็บไซต์</h3>
             <ol>
-                <li>สามารถซื้อได้ที่ลิ้งนี้ <a href="/showtimes">click</a></li>
+                <li>สามารถซื้อได้ที่นี่ <a href="/showtimes">click</a></li>
                 <li>กรอกข้อมูลของท่านให้ครบถ้วน </li>
                 <li>เช็คอีเมลเพื่อเก็บ Order id ไว้ และนำมารับบัตรเพื่อชมการแสดง <br><strong>หากไม่มี Order id ท่านจะไม่สามารถเข้าชมการแสดงได้</strong></li>
                 <li>เมื่อท่านชำระเงินเรียบร้อยแล้ว สามารถยืนยันการชำระเงินได้ที่ <a href="/payment">click</a></li>
                 <li>ตรวจสอบสถานะได้ภายใน 1-2 วันหลังจากชำระเงิน <a href="/checkStatus">click</a></li>
             </ol>
             <h3>ซื้อด้วยตนเอง</h3>
-            <p>บูธละคอนมะนุด (สถานที่จะตามไปทีหลัง)</p>
+            <p>บูธละคอนมะนุด ศูนย์เรียนรวม 1</p>
         </div>
 
         <div class="mt-3 ml-5 card col-sm" style="background-color: #2b2624; padding: 33px 30px ; height: 50%">
