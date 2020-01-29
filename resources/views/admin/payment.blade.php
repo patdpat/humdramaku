@@ -25,7 +25,7 @@
 
         }
         .btn-booking {
-            background-color: #f2c05e;
+            background-color: #f3b204;
             border-radius: 5px;
 
         }
@@ -47,7 +47,7 @@
 
     <div>
 
-        <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #63308f" id="nav">
+        <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #351c4b" id="nav">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}"><img style="width: 150px" src="{{asset('images/logo.png')}}"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,13 +55,13 @@
                 </button>
                 <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
                     <div class="navbar-nav text-center" style="font-size: 20px">
-                        <a class="nav-item nav-link active" href="{{ url('/about') }}">เกี่ยวกับ<span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" href="{{route('index')}}" id="story">เนื้อเรื่องย่อ</a>
-                        <a class="nav-item nav-link" href="{{route('ticket')}}">การจำหน่ายบัตร</a>
-                        <a class="nav-item nav-link" href="{{route('map')}}">แผนที่</a>
-                        <a class="nav-item nav-link" href="{{route('payment')}}">ชำระเงิน</a>
-                        <a class="nav-item nav-link" href="{{route('checkStatus')}}">ตรวจสอบสถานะ</a>
-                        <a class="nav-item nav-link btn-booking text-center" id="booking" href="{{url('/showtimes')}}">สำรองที่นั่ง</a>
+                        <a class="nav-item nav-link active" href="{{ url('/about') }}" style="color : white">เกี่ยวกับ<span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="{{route('index')}}" id="story"  style="color : white">เนื้อเรื่องย่อ</a>
+                        <a class="nav-item nav-link" href="{{route('ticket')}}" style="color : white">การจำหน่ายบัตร</a>
+                        <a class="nav-item nav-link" href="{{route('map')}}" style="color : white">แผนที่</a>
+                        <a class="nav-item nav-link" href="{{route('payment')}}" style="color : white">ชำระเงิน</a>
+                        <a class="nav-item nav-link" href="{{route('checkStatus')}}" style="color : white">ตรวจสอบสถานะ</a>
+                        <a class="nav-item nav-link btn-booking text-center" id="booking" href="{{url('/showtimes')}}" style="color :white">สำรองที่นั่ง</a>
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@
             <div class="mt-5" style="color: black;">
             <h1 style="padding: 20px 0px; border-bottom: 2px solid #851a21">Payment</h1>
         </div>
-        <div style="font-size: 14px">
+        <div style="font-size: 14px;color:#351c4b">
         <h3>ขั้นตอนการชำระเงิน</h3>
             <ol>
                 <li>กรอก Order id ของท่าน </li>
@@ -83,6 +83,12 @@
                 <li>ตรวจสอบสถานะได้ที่ <a href="{{route('checkStatus')}}">click</a></li>
             </ol>
         </div>
+        <div class="col-sm mt-5" >
+                <div class="card mt-3 pt-3 pl-3 pb-3 pr-3 text-center" style="border-radius: 20px">
+                <h2 class="pb-3 text-center" style="color: white">QRcode ชำระเงิน</h2>
+                <div>
+                        <img src="{{asset('images/qrcode.png')}}" style="width: 30%; transition: 1.0s" id="advisor">
+                    </div>
         </div>
         <div class="card mt-5" style="background-color: #2b2624; border-radius: 20px ; padding: 20px 20px">
             <p class="text-center" style="color: white ; font-size: 23px ; padding: 10px 0px">กรุณากรอกเลข Order id และอัพโหลดหลักฐานการโอนเงินของท่าน

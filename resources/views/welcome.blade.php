@@ -42,7 +42,7 @@
             }
 
             .btn-booking {
-                background-color: #f2c05e;
+                background-color: #f3b204;
                 border-radius: 5px;
 
             }
@@ -57,7 +57,7 @@
 
             .card {
                 transition: 0.5s;
-                background-color: #2b2624;
+                background-color: #351c4b;
             }
 
             .card:hover {
@@ -68,37 +68,40 @@
     </head>
     <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
-    <div>
+<div>
 
-
-        <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #63308f" id="nav">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/overview') }}"><img style="width: 150px" src="{{asset('images/logo.png')}}"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
-                    <div class="navbar-nav text-center" style="font-size: 20px">
-                        <a class="nav-item nav-link active" href="{{ url('/about') }}">เกี่ยวกับ<span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" href="{{route('index')}}" id="story">เนื้อเรื่องย่อ</a>
-                        <a class="nav-item nav-link" href="{{route('ticket')}}">การจำหน่ายบัตร</a>
-                        <a class="nav-item nav-link" href="{{route('map')}}">แผนที่</a>
-                        <a class="nav-item nav-link" href="{{route('payment')}}">ชำระเงิน</a>
-                        <a class="nav-item nav-link" href="{{route('checkStatus')}}">ตรวจสอบสถานะ</a>
-                        <a class="nav-item nav-link btn-booking text-center" id="booking" href="{{url('/showtimes')}}">สำรองที่นั่ง</a>
-                    </div>
+    <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #351c4b" id="nav">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url('/') }}"><img style="width: 150px" src="{{asset('images/logo.png')}}"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                <div class="navbar-nav text-center" style="font-size: 20px">
+                    <a class="nav-item nav-link active" href="{{ url('/about') }}" style="color : white">เกี่ยวกับ<span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="{{route('index')}}" id="story"  style="color : white">เนื้อเรื่องย่อ</a>
+                    <a class="nav-item nav-link" href="{{route('ticket')}}" style="color : white">การจำหน่ายบัตร</a>
+                    <a class="nav-item nav-link" href="{{route('map')}}" style="color : white">แผนที่</a>
+                    <a class="nav-item nav-link" href="{{route('payment')}}" style="color : white">ชำระเงิน</a>
+                    <a class="nav-item nav-link" href="{{route('checkStatus')}}" style="color : white">ตรวจสอบสถานะ</a>
+                    <a class="nav-item nav-link btn-booking text-center" id="booking" href="{{url('/showtimes')}}" style="color : 351c4b">สำรองที่นั่ง</a>
                 </div>
             </div>
+        </div>
 
-        </nav>
+    </nav>
 
     </div>
 
     <div class="container mt-5 col-md-8 col-sm-12">
-        <h2 class="text-center" style="font-size: 40px" >เนื้อเรื่องย่อ</h2>
-        <p class="text-center" style="font-size: 20px">ละคอนมะนุดครั้งที่28 Powerful You Are ประลองป่วนรัก พลังป่วนโลก</p>
+        
+        
         <div class="card mt-3 pt-5 pl-5 pb-5 pr-5" style="border-radius: 20px" id="card">
+        <div class="col-sm mt-5" style="color: white">
+            <h2 class="text-center" style="font-size: 40px" >เนื้อเรื่องย่อ</h2>
+        </div>
             <div class="row">
+            
                 <div id="demo" class="carousel slide col-sm col-md-12 col-lg" data-ride="carousel">
                     <ul class="carousel-indicators">
                         {{--<li data-target="#demo" data-slide-to="0" class="active"></li>--}}
@@ -149,7 +152,7 @@
         </div>
     </div>
 
-    <p class="text-center mt-3" style="color: white"><span style="font-size: 20px">© </span>2017 HUMDRAMA All Rights Reserved</p>
+    <p class="text-center mt-3" style="color: white"><span style="font-size: 20px">© </span>2020 HUMDRAMA All Rights Reserved</p>
 
 
     {{--<script>--}}

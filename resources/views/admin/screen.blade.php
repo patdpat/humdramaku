@@ -32,7 +32,7 @@
 
 
         .btn-booking {
-           background-color: #f2c05e;
+           background-color: #f3b204;
             border-radius: 5px;
 
         }
@@ -102,25 +102,29 @@
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
-<div>
+    <div>
 
-    <nav class="navbar navbar-expand-lg navbar-light " style="min-height: 80px ;background-color: #f2c05e" id="nav">
-        <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}"><img style="width: 150px" src="{{asset('images/logo.png')}}"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
-                <div class="navbar-nav text-center" style="font-size: 20px">
-                    <a class="nav-item nav-link active" href="{{ url('/about') }}">เกี่ยวกับ<span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="{{route('index')}}" id="story">เนื้อเรื่องย่อ</a>
-                    <a class="nav-item nav-link" href="{{route('ticket')}}">การจำหน่ายบัตร</a>
-                    <a class="nav-item nav-link" href="{{route('map')}}">แผนที่</a>
-                    <a class="nav-item nav-link" href="{{route('payment')}}">ชำระเงิน</a>
-                    <a class="nav-item nav-link" href="{{route('checkStatus')}}">ตรวจสอบสถานะ</a>
-                    <a class="nav-item nav-link btn-booking text-center" id="booking" href="{{url('/showtimes')}}">สำรองที่นั่ง</a>
+        <nav class="navbar navbar-expand-lg navbar-light  sticky-top" style="min-height: 80px ;background-color: #351c4b" id="nav">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url('/') }}"><img style="width: 150px" src="{{asset('images/logo.png')}}"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                    <div class="navbar-nav text-center" style="font-size: 20px">
+                        <a class="nav-item nav-link active" href="{{ url('/about') }}" style="color : white">เกี่ยวกับ<span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="{{route('index')}}" id="story"  style="color : white">เนื้อเรื่องย่อ</a>
+                        <a class="nav-item nav-link" href="{{route('ticket')}}" style="color : white">การจำหน่ายบัตร</a>
+                        <a class="nav-item nav-link" href="{{route('map')}}" style="color : white">แผนที่</a>
+                        <a class="nav-item nav-link" href="{{route('payment')}}" style="color : white">ชำระเงิน</a>
+                        <a class="nav-item nav-link" href="{{route('checkStatus')}}" style="color : white">ตรวจสอบสถานะ</a>
+                        <a class="nav-item nav-link btn-booking text-center" id="booking" href="{{url('/showtimes')}}" style="color :white">สำรองที่นั่ง</a>
+                    </div>
                 </div>
             </div>
+
+        </nav>
+    </div>
         </div>
 
     </nav>
