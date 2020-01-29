@@ -153,7 +153,7 @@
         <div class="mt-3 setmargin col-md-12" style="cursor: pointer; margin: 0 auto">
             {{--{{ dd($seats) }}--}}
             <table class="mt-2" style="margin: 0px auto">
-                @for ($i = 15; $i > 0; $i--)
+                @for ($i = 14; $i > 0; $i--)
                     @if ($i==1)
                         @php $text = "A"; @endphp
                     @elseif ($i==2)
@@ -182,8 +182,6 @@
                         @php $text = "L"; @endphp
                     @elseif ($i==14)
                         @php $text = "M"; @endphp
-                    @elseif ($i==15)
-                        @php $text = "N"; @endphp
                     @else
 
 
@@ -539,40 +537,25 @@
                                     @elseif ($i==14 && $j==45)
                                         <td id="seatSelect">{{$text}}</td>
 
-
-
-
-
-
-                                         {{--N--}}
-                                    @elseif ($i==15 && $j<=2)
-                                        <td id="seatSelect">
-                                            <img id="{{$seatnum}}" src="{{asset('images/nullseat.png')}}" alt="">
-                                        </td>
-
-                                    @elseif ($i==15 && $j>=43 && $j<=44)
-                                        <td id="seatSelect">
-                                            <img id="{{$seatnum}}" src="{{asset('images/nullseat.png')}}" alt="">
-                                        </td>
-
-                                    @elseif ($i==15 && $j==45)
-                                        <td id="seatSelect">{{$text}}</td>
-
-
-
-
-
-
-
+            
                                     @else
+                                        @php
+                                            $isExpensiveSeat = ($i >= 4 && $i <= 12 && $j >= 13 && $j <= 27);
+                                        @endphp
                                         @if (in_array($seatnum,$seats))
                                             <td id="seatSelect">
                                                 <img id="{{$seatnum}}" src="{{asset('images/notavailable.png')}}" alt="">
                                             </td>
                                         @else
-                                            <td id="seatSelect">
-                                                <img id="{{$seatnum}}" class="imgSelect" src="{{asset('images/seat.png')}}" alt="">
-                                            </td>
+                                            @if ($isExpensiveSeat)
+                                                <td id="seatSelect">
+                                                    <img id="{{$seatnum}}" class="imgSelect" src="{{asset('images/seat.png')}}" alt="" data-price="250">
+                                                </td>
+                                            @else
+                                                <td id="seatSelect">
+                                                    <img id="{{$seatnum}}" class="imgSelect" src="{{asset('images/seat.png')}}" alt="" data-price="150">
+                                                </td>
+                                            @endif
                                         @endif
                                             @php $count += 1 @endphp
                                     @endif
@@ -663,6 +646,7 @@
         $('.imgSelect').on('click tap',function (e) {
             console.log($(this).attr('id'))
             console.log($(this).attr('src'))
+            const seatPrice = parseInt(e.target.getAttribute('data-price')) || 150;
             // if (count < 6) {
                 if ($(this).attr('src') == '{{asset('images/seat.png')}}') {
                     $(this).attr('src','{{asset("images/reserve.png")}}');
@@ -681,15 +665,14 @@
                             // $('#showseat').append("</div>");
                         })
                     }
-
-                    $('#totalprice').text(price+=150);   // แก้ราคาตอนครบ 300 คน 150 -> 250
+                    $('#totalprice').text(price+=seatPrice);   // แก้ราคาตอนครบ 300 คน 150 -> 250
                 }else{
                     $(this).attr('src','{{asset("images/seat.png")}}');
                     arr.splice($.inArray($(this).attr('id'), arr),1);
                     if (arr.length == 1) {
                         $('#showseat').text("");
                         $('#showseat').append("<div class='boxseat'>"+arr[0]+"</div>");
-                        $('#totalprice').text(price-=150);  // แก้ราคาตอนครบ 300 คน   150 -> 250
+                        $('#totalprice').text(price-=seatPrice);  // แก้ราคาตอนครบ 300 คน   150 -> 250
 
                     }
                     else {
@@ -698,7 +681,7 @@
                             console.log(key + ": " + value);
                             $('#showseat').append("<div class='boxseat'>"+value+"</div>");
                         })
-                        $('#totalprice').text(price-=150);  // แก้ราคาตอนครบ 300 คน   150 -> 250
+                        $('#totalprice').text(price-=seatPrice);  // แก้ราคาตอนครบ 300 คน   150 -> 250
                     }
 
                     count -=1 ;

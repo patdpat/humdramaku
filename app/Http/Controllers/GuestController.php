@@ -121,10 +121,6 @@ class GuestController extends Controller
             $checkCount += 1;
         }
 
-        if ($seatPrice*$countData != $request->getPrice)  {
-            return view('admin.error');
-        }
-
         foreach ($allseat as $seat) {
 //            echo $request->orderID;
             if ($seat!=null) {
