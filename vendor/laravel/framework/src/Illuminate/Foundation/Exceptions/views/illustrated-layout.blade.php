@@ -294,7 +294,7 @@
         }
 
         .font-sans {
-            font-family: 'rsuregular';;
+            font-family: Nunito, sans-serif;
         }
 
         .font-light {

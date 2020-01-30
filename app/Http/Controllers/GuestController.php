@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Alert;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Mail;
+use Stampspv\Wittylight\WittylightController;
 
 
 class GuestController extends Controller
@@ -170,7 +171,15 @@ class GuestController extends Controller
         $name = $request->name;
 
         try{
-            $mail = Mail::to($request->email)->send(new TestEmail($orderId,$showSeat,$name));
+//            $mail = Mail::to($request->email)->send(new TestEmail($orderId,$showSeat,$name));
+
+            $data = [
+                'title'     => 'humdramaku',
+                'name'      => 'humdramaku',
+                'form'      => 'no-reply@humdramaku.com',
+                'html'      => view('emails.test',['orderid'=>$orderId , 'showSeat'=>$showSeat , 'name'=>$name])->render(),
+            ];
+            $mail = WittylightController::sendmail('iceknpsuwan@gmail.com',$data);
 
         }catch (\Exception $x){
             return "error".$x;

@@ -1,0 +1,20 @@
+{
+    "name": "stampspv/wittylight",
+    "description": "Wittylight",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.1903",
+    "keywords": ["laravel", "sendmail","api"],
+    "authors": [
+        {
+            "name": "Suphavich.Stamp",
+            "email": "suphavich.c@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Stampspv\\Wittylight\\": "src"
+        }
+    },
+    "require": {}
+}

@@ -3931,6 +3931,46 @@
         "homepage": "https://github.com/sebastianbergmann/version"
     },
     {
+        "name": "stampspv/wittylight",
+        "version": "1.1903",
+        "version_normalized": "1.1903.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/stampspv/wittylight.git",
+            "reference": "1db0495d59b113f3ee34145cf51223eb852e1694"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/stampspv/wittylight/zipball/1db0495d59b113f3ee34145cf51223eb852e1694",
+            "reference": "1db0495d59b113f3ee34145cf51223eb852e1694",
+            "shasum": ""
+        },
+        "time": "2019-07-25T10:43:33+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Stampspv\\Wittylight\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Suphavich.Stamp",
+                "email": "suphavich.c@gmail.com"
+            }
+        ],
+        "description": "Wittylight",
+        "keywords": [
+            "api",
+            "laravel",
+            "sendmail"
+        ]
+    },
+    {
         "name": "swiftmailer/swiftmailer",
         "version": "v6.1.3",
         "version_normalized": "6.1.3.0",
@@ -5234,6 +5274,7 @@
             "http",
             "psr",
             "psr-7"
-        ]
+        ],
+        "abandoned": "laminas/laminas-diactoros"
     }
 ]

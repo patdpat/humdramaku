@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6be2c62744a62259929fa0f8779fb839",
+    "content-hash": "01d7f3acb9004350e34840a9d902940e",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2134,6 +2134,44 @@
             "time": "2018-11-03T16:02:56+00:00"
         },
         {
+            "name": "stampspv/wittylight",
+            "version": "1.1903",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stampspv/wittylight.git",
+                "reference": "1db0495d59b113f3ee34145cf51223eb852e1694"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stampspv/wittylight/zipball/1db0495d59b113f3ee34145cf51223eb852e1694",
+                "reference": "1db0495d59b113f3ee34145cf51223eb852e1694",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Stampspv\\Wittylight\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Suphavich.Stamp",
+                    "email": "suphavich.c@gmail.com"
+                }
+            ],
+            "description": "Wittylight",
+            "keywords": [
+                "api",
+                "laravel",
+                "sendmail"
+            ],
+            "time": "2019-07-25T10:43:33+00:00"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v6.1.3",
             "source": {
@@ -3304,6 +3342,7 @@
                 "psr",
                 "psr-7"
             ],
+            "abandoned": "laminas/laminas-diactoros",
             "time": "2018-09-05T19:29:37+00:00"
         }
     ],
