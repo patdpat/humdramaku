@@ -179,7 +179,7 @@ class GuestController extends Controller
                 'form'      => 'no-reply@humdramaku.com',
                 'html'      => view('emails.test',['orderid'=>$orderId , 'showSeat'=>$showSeat , 'name'=>$name])->render(),
             ];
-            $mail = WittylightController::sendmail('iceknpsuwan@gmail.com',$data);
+            $mail = WittylightController::sendmail($request->email,$data);
 
         }catch (\Exception $x){
             return "error".$x;
