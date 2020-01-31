@@ -553,11 +553,11 @@
                                         @else
                                             @if ($isExpensiveSeat)
                                                 <td id="seatSelect">
-                                                    <img id="{{$seatnum}}" class="imgSelect" src="{{asset('images/seat.png')}}" alt="" data-price="250">
+                                                    <img id="{{$seatnum}}" class="imgSelect" src="{{asset('images/seat.png')}}" alt="" data-price="270">
                                                 </td>
                                             @else
                                                 <td id="seatSelect">
-                                                    <img id="{{$seatnum}}" class="imgSelect" src="{{asset('images/seat.png')}}" alt="" data-price="150">
+                                                    <img id="{{$seatnum}}" class="imgSelect" src="{{asset('images/seat.png')}}" alt="" data-price="250">
                                                 </td>
                                             @endif
                                         @endif
