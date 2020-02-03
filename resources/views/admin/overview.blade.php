@@ -113,7 +113,7 @@
           <img class="small-icon" src="{{asset('images/location.png')}}">
         </div>
         <div class="col">
-          <span>โรงละครซักแห่งในโลกนี้</span>
+          <span>โรงละครสำนักพิพิธภัณฑ์และวัฒนธรรมการเกษตร</span>
         </div>
       </div>
     </div>
