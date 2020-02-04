@@ -44,7 +44,7 @@
         }
 
         #block {
-            background-color: #f3b204;
+            
         }
 
         #card {

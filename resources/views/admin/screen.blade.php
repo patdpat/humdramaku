@@ -577,10 +577,10 @@
     <div class="container">
         <div class="card mt-5 col-md-12 col-sm-6" style="color:  black ; padding: 10px 0px">
             <div class="row text-center" style="font-size: 18px">
-                <div class="col-sm pt-1">
+                <div class="col-sm pt-1" style="color : white">
                     ราคารวม : <span id="totalprice"></span>
                 </div>
-                <div class="col-sm pt-1">
+                <div class="col-sm pt-1" style="color : white">
                     ที่นั่งที่เลือก : <span id="showseat"></span>
                 </div>
                 <div class="col-sm">

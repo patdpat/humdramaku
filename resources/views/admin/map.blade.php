@@ -64,7 +64,7 @@
             color: #351c4b;
             font-size: 40px;
             /*padding: 30px 0px;*/
-            border-bottom: 1px solid #851a21;
+            border-bottom: 1px solid white;
             margin-bottom: 40px;
         }
 

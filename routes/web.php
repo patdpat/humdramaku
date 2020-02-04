@@ -24,8 +24,10 @@ Route::get('files/payment/{filename}', function($filename)
     }
 
     $fileContents = File::get($filePath);
+    
 
-    return Response::make($fileContents,200);
+    // return Response::make($fileContents,200);
+        return response()->file($filePath);
 //
 //     Image
 //    return Response::make($fileContents, 200);

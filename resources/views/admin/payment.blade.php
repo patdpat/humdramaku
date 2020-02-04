@@ -74,25 +74,36 @@
             <div class="mt-5" style="color: black;">
             <h1 style="padding: 20px 0px; border-bottom: 2px solid #851a21">Payment</h1>
         </div>
-        <div style="font-size: 14px;color:#351c4b">
-        <h3>ขั้นตอนการชำระเงิน</h3>
-            <ol>
-                <li>กรอก Order id ของท่าน </li>
-                <li>แนบสลิปการชำระเงิน</li>
-                <li>รอตรวจสอบสถานะการชำระเงิน (ใช้เวลาประมาณ 1-2 วัน)</li>
-                <li>ตรวจสอบสถานะได้ที่ <a href="{{route('checkStatus')}}">click</a></li>
-            </ol>
+        <div class="card mt-5" style="background-color: #351c4b; border-radius: 20px ; padding: 20px 20px">
+        <h2 class="pb-3 text-center" style="color: white">ขั้นตอนการชำระเงิน</h2>
+        
+            <div class=" container row">
+                <div class="col-sm text-center">
+                <img src="{{asset('images/qrcode.png')}}" style="width: 70%; transition: 1.0s" id="advisor">
+            <h5>รหัสพร้อมเพย์ : 090-738-7240</h5>
+
+                </div>
+
+                <div class="col-sm mt-5" style="color: white">
+
+                
+                <ol>
+                        <li>กรอก Order id ของท่าน </li>
+                        <li>แนบสลิปการชำระเงิน</li>
+                        <li>รอตรวจสอบสถานะการชำระเงิน (ใช้เวลาประมาณ 1-2 วัน)</li>
+                        <li>ตรวจสอบสถานะได้ที่ <a href="{{route('checkStatus')}}">click</a></li>
+                    </ol>
+                  
+
+
+                </div>
+            </div>
+
         </div>
-        <div class="col-sm mt-5" >
-                <div class="card mt-3 pt-3 pl-3 pb-3 pr-3 text-center" style="border-radius: 20px">
-                <h2 class="pb-3 text-center" style="color: white">QRcode ชำระเงิน</h2>
-                <div>
-                        <img src="{{asset('images/qrcode.png')}}" style="width: 30%; transition: 1.0s" id="advisor">
-                    </div>
-        </div>
-        <div class="card mt-5" style="background-color: #2b2624; border-radius: 20px ; padding: 20px 20px">
+        <div class="card mt-5" style="background-color: #351c4b; border-radius: 20px ; padding: 20px 20px">
+        <h2 class="pb-3 text-center" style="color: white">ยืนยันการชำระเงิน</h2>
             <p class="text-center" style="color: white ; font-size: 23px ; padding: 10px 0px">กรุณากรอกเลข Order id และอัพโหลดหลักฐานการโอนเงินของท่าน
-                <br><span style="font-size: 15px">เลข Order id ของท่านจะถูกส่งไปยัง email ของท่าน</span></p>
+                <br><span style="font-size: 15px">เลข Order id ของท่านจะถูกส่งไปยัง email ที่ท่านลงทะเบียนจองบัตร</span></p>
             <div class=" container row">
                 <div class="col-sm text-center">
                     <i style="font-size: 200px ; color: black ; padding: 50px 50px" class="fas fa-hand-holding-usd"></i>
