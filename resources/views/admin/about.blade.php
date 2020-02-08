@@ -188,7 +188,7 @@
                     </div>
 
                     <div class="mt-3 text-center" id="nameadvisor">
-                        <p>อาจารย์ ดร. วราพรรณ อภิศุภโชค</p>
+                        <p>อาจารย์ ดร. วราพรรณ อภิศุภะโชค</p>
                     </div>
                     <div>
                         <img src="{{asset('images/teacher1.png')}}" style="width: 30%; transition: 1.0s" id="advisor">
@@ -203,7 +203,7 @@
                     </div>
 
                     <div class="mt-3 text-center" id="nameadvisor">
-                        <p>อาจารย์ ปิยภัทร คงแสนคำ</p>
+                        <p>อาจารย์ ปิยะภัทร คงแสนคำ</p>
                     </div>
                 </div>
                 </div>
