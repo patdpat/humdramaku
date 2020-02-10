@@ -544,7 +544,7 @@
             
                                     @else
                                         @php
-                                            $isExpensiveSeat = ($i >= 3 && $i <= 12 && $j >= 14 && $j <= 26);
+                                            $isExpensiveSeat = ($i >= 99);
                                         @endphp
                                         @if (in_array($seatnum,$seats))
                                             <td id="seatSelect">
@@ -576,9 +576,6 @@
 
     <div class="container">
         <div class="card mt-5 col-md-12 col-sm-6" style="color:  black ; padding: 10px 0px">
-        <div class="card">
-            <h5 class="text-center mt-2" style="color: white"> ที่นั่งแต่ละที่จะมีราคาที่แตกต่างกันโดยที่นั่งช่วงกลางจะมีราคาสูงกว่าปกติ</h5>
-        </div>
             <div class="row text-center" style="font-size: 18px">
                 <div class="col-sm pt-1" style="color : white">
                     ราคารวม : <span id="totalprice"></span>

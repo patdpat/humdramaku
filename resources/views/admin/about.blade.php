@@ -195,7 +195,7 @@
                     </div>
 
                     <div class="mt-3 text-center" id="nameadvisor">
-                        <p>อาจารย์ ขจร ฝ้ายเทศ</p>
+                        <p>อาจารย์ ดร. ขจร ฝ้ายเทศ</p>
                     </div>
                     
                     <div>

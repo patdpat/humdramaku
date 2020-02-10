@@ -106,7 +106,7 @@
                         <div class="col-sm" style="color: white">
                             <div class="mt-5">
                                 <div style="border-bottom: saddlebrown solid 1px">
-                                    <h3>HUMDRAMA | Bless You Bully</h3>
+                                    <h3>HUMDRAMA | Powerful You Are</h3>
                                     <p>ละคอนมะนุดครั้งที่28 Powerful You Are ประลองป่วนรัก พลังป่วนโลก</p>
                                 </div>
 
